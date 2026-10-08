@@ -42,3 +42,22 @@ P: children; E: thimerosal-containing vaccines; C: thimerosal-free vaccines (or 
 ## Answer
 Because the included studies may be too different (in population, exposure, outcome or design) or may not report the data needed to pool their results. The review then stays a systematic review with a narrative synthesis.
 :::
+
+### Practice quiz
+
+The real quiz has the same format: 15 minutes, on paper, no devices (a simple calculator is allowed). Try it without your notes first.
+
+1. Name the four elements of a PECO question. (1 point)
+2. A study follows 10,000 children from birth and records which vaccines they receive and whether they are later diagnosed with autism. Which design is this? (1 point)
+3. Give two differences between a narrative review and a systematic review. (2 points)
+4. In a PRISMA flow diagram, 412 records are identified, 37 duplicates are removed, 340 records are excluded on title and abstract, and 26 full texts are excluded. How many studies are included? (2 points)
+5. Why do systematic reviews on vaccines and autism rely mostly on observational studies and not on randomised trials? (2 points)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. Population, Exposure, Comparison, Outcome.
+2. A (prospective) cohort study.
+3. Any two of: a systematic review has a predefined and reproducible search, explicit eligibility criteria, a risk-of-bias assessment of each study, and a transparent synthesis; a narrative review does not.
+4. 412 − 37 = 375 screened; 375 − 340 = 35 full texts; 35 − 26 = **9 studies included**.
+5. Withholding or randomly assigning vaccines to children is not ethical or feasible, and autism is rare, so very large populations and long follow-up are needed. Observational cohort and case-control studies are then the best available evidence.
+:::

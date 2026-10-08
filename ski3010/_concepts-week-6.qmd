@@ -1,0 +1,10 @@
+## How to write a good peer review
+
+Your peer review is graded individually with the [peer review rubric](../rubrics.qmd).
+
+1. **Start with a short summary** of the paper in your own words: question, methods, main result.
+2. **Major comments** first: problems that affect the conclusion. Check the methods (search, eligibility, risk of bias, effect measure, model) and whether the results support the conclusion.
+3. **Minor comments** next: clarity, tables and figures, references, language.
+4. **Be specific:** refer to a page, section, table or figure.
+5. **Be constructive:** every main comment comes with a suggestion for improvement.
+6. **Use the course concepts:** PRISMA 2020, NOS, fixed versus random effects, I², funnel plot.

@@ -1,0 +1,71 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 2 (next week's tutorial). Textbook: Chapters 2 and 4.
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| Risk (cumulative incidence) | The proportion of people without the disease at the start who develop it during a period: new cases / people at risk. |
+| Incidence rate | New cases divided by the total person-time at risk, for example 3 per 1,000 person-years. |
+| Prevalence | The proportion of a population that has the disease at one moment in time. |
+| Odds | The number of people with the outcome divided by the number without it: p / (1 − p). |
+| 2×2 table | The table of exposed/unexposed against outcome yes/no (cells a, b, c, d) from which all measures of association follow. |
+| Risk ratio (RR) | Risk in the exposed divided by risk in the unexposed: [a/(a+b)] / [c/(c+d)]. |
+| Odds ratio (OR) | Odds in the exposed divided by odds in the unexposed: (a×d) / (b×c). The measure of choice in case-control studies. |
+| Risk difference (RD) | Risk in the exposed minus risk in the unexposed; the absolute excess risk. |
+| Null value | The value of "no association": 1 for ratios (RR, OR), 0 for differences (RD). |
+| Rare disease assumption | When the outcome is rare (below about 10%), the OR is close to the RR. |
+| Standard error (SE) | The precision of an estimate; smaller SE means a more precise estimate. |
+| 95% confidence interval | The range of values compatible with the data; for ratios it is calculated on the log scale: exp(ln(RR) ± 1.96 × SE). |
+| Statistical significance | A 95% CI for a ratio that excludes 1 corresponds to p < 0.05. |
+| Precision versus validity | A narrow CI says the estimate is precise, not that it is free of bias. |
+
+### Practice questions
+
+**1.** A cohort study follows 2,000 children who received thimerosal-containing vaccines and 3,000 who did not. Autism is diagnosed in 20 exposed and 24 unexposed children. Calculate the risk in both groups, the risk ratio and the risk difference.
+
+::: {.callout-tip collapse="true"}
+## Answer
+Risk exposed = 20/2000 = 0.010; risk unexposed = 24/3000 = 0.008. RR = 0.010/0.008 = **1.25**. RD = 0.010 − 0.008 = **0.002**, or 2 extra cases per 1,000 children.
+:::
+
+**2.** Calculate the odds ratio for the same data. Why is it so close to the risk ratio?
+
+::: {.callout-tip collapse="true"}
+## Answer
+OR = (20 × 2976) / (1980 × 24) = **1.25**. Autism is rare (around 1%), so odds and risks are almost the same and the OR approximates the RR.
+:::
+
+**3.** The 95% CI of this risk ratio is 0.69 to 2.26. Interpret the result.
+
+::: {.callout-tip collapse="true"}
+## Answer
+The point estimate suggests a 25% higher risk, but the CI includes 1 (no association) and is wide: the data are compatible with a 31% lower risk up to more than twice the risk. There is no statistically significant association and the estimate is imprecise.
+:::
+
+**4.** A case-control study includes 100 children with autism (60 exposed) and 200 controls (100 exposed). Calculate the odds ratio. Why can you not calculate a risk ratio here?
+
+::: {.callout-tip collapse="true"}
+## Answer
+OR = (60 × 100) / (40 × 100) = **1.5**. In a case-control study the researcher chooses how many cases and controls to include, so the proportion with the outcome is set by the design and risks cannot be estimated.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, calculator allowed.
+
+1. In a town, 15 of 1,000 children have an autism diagnosis on 1 January. Is this a risk, a rate or a prevalence? (1 point)
+2. Fill in the formula of the odds ratio using cells a, b, c and d of a 2×2 table. (1 point)
+3. A study reports RR = 0.80 (95% CI 0.65 to 0.98). Interpret this result in one or two sentences. (2 points)
+4. A cohort has 50 cases among 1,000 exposed and 25 cases among 1,000 unexposed people. Calculate the RR and the RD. (2 points)
+5. Explain why a narrow confidence interval does not prove that the association is causal. (2 points)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. A prevalence (existing cases at one moment).
+2. OR = (a × d) / (b × c).
+3. The exposed have a 20% lower risk; the CI excludes 1, so the association is statistically significant, with a true reduction between 2% and 35%.
+4. Risks 0.05 and 0.025: RR = **2.0**, RD = **0.025** (25 extra cases per 1,000).
+5. The CI only reflects random error (precision). Bias such as confounding or selection bias can produce a precise but wrong estimate.
+:::

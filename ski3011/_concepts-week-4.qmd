@@ -1,0 +1,66 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 3 (next week's tutorial).
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| Binary outcome | Events/non-events per group: pooled as OR, RR or RD from the 2×2 counts. |
+| `ai, n1i, ci, n2i` | Events and group sizes in treatment and control group, an alternative to the four cells. |
+| Mantel-Haenszel | `rma.mh()`: a fixed-effect method for binary data that works well with small numbers of events. |
+| `metabin()` | The `meta` package function for binary data: `event.e`, `n.e`, `event.c`, `n.c`, `sm = "OR"`. |
+| Zero cells | Studies with zero events in one arm get a continuity correction (`incr = 0.5`). |
+| Continuous outcome | Means, SDs and group sizes per group. |
+| Mean difference (MD) | Difference in means when all studies use the same scale. |
+| Standardised mean difference (SMD) | Difference in means divided by the pooled SD (Hedges' g) when studies use different scales. |
+| `metacont()` | The `meta` function for continuous data: `n.e, mean.e, sd.e, n.c, mean.c, sd.c`. |
+| `metagen()` | Pools any pre-calculated effect size: `TE` (e.g. log OR) and `seTE`. |
+| Common effect | The `meta` package's name for the fixed-effect model. |
+
+### Practice questions
+
+**1.** What is computed here, and which effect size?
+
+```r
+dat <- escalc(measure = "MD", m1i = m1i, sd1i = sd1i, n1i = n1i,
+              m2i = m2i, sd2i = sd2i, n2i = n2i, data = dat.normand1999)
+```
+
+::: {.callout-tip collapse="true"}
+## Answer
+For each study the mean difference (`yi` = m1i − m2i) and its variance (`vi`), from the means, SDs and group sizes of the two groups (here: length of hospital stay in specialist versus routine stroke care).
+:::
+
+**2.** The pooled MD from `rma()` is −15.11 days (95% CI −32.64 to 2.43), I² = 99%. Interpret.
+
+::: {.callout-tip collapse="true"}
+## Answer
+On average stays are 15 days shorter with specialist care, but the CI includes 0, so this is not statistically significant. The heterogeneity is enormous (99%): the studies differ so much that one pooled mean difference is hard to interpret.
+:::
+
+**3.** When would you use an SMD instead of an MD?
+
+::: {.callout-tip collapse="true"}
+## Answer
+When the studies measure the same construct on different scales (for example different pain or anxiety questionnaires). The SMD expresses the difference in standard deviation units.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, no devices.
+
+1. Explain each argument: `metabin(event.e = ev_t, n.e = n_t, event.c = ev_c, n.c = n_c, sm = "RR", data = dat)`. (2 points)
+2. A study has 0 events in the control group. What problem does this give for the OR, and how does `metabin()` deal with it? (2 points)
+3. You only have the published OR and 95% CI of each study. Write the line of code that computes the SE of the log OR from the upper limit, as in the lecture script. (2 points)
+4. Which function would you then use to pool these studies, and with which two main arguments? (2 points)
+5. Why is an SMD of 0.5 called a "moderate" effect, and what does it mean in words? (2 points)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. Events and sample size in the experimental group, events and sample size in the control group, the summary measure (risk ratio) and the data frame.
+2. The odds in the control group are 0, so the OR is infinite or undefined. `metabin()` adds a continuity correction (by default 0.5) to all cells of that study.
+3. `dat$se_log_or <- (log(dat$or_ucl) - log(dat$or)) / 1.96`
+4. `metagen()` with `TE = log OR` and `seTE = its SE` (plus `sm = "OR"` to show ORs).
+5. By Cohen's rule of thumb (0.2 small, 0.5 moderate, 0.8 large): the group means differ by half a standard deviation.
+:::

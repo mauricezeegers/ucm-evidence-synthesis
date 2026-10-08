@@ -1,0 +1,30 @@
+## Concepts and practice
+
+This week has no quiz: the first quiz (next to week 3) is on R basics. These concepts you need for your protocol (A1).
+
+| Concept | In one sentence |
+|---|---|
+| Review protocol | The plan of your review written before you start: question, eligibility criteria, search, selection, extraction, risk of bias and analysis. |
+| Protocol registration | Publishing the protocol (here on protocols.io) with a date stamp, so readers can check that you did what you planned. |
+| PRISMA-P | The reporting checklist for systematic review protocols. |
+| Outcome switching | Changing the primary outcome after seeing the results; registration makes this visible. |
+| Title/abstract screening | First selection round on titles and abstracts against the eligibility criteria. |
+| Full-text screening | Second round: reading the full paper and recording the reason for exclusion. |
+| Dual screening | Two reviewers screen independently and resolve conflicts; Covidence handles this for you. |
+| Data extraction form | A predefined form for the study characteristics, risk of bias and outcome data you extract from each study. |
+
+### Practice questions
+
+**1.** Why should you register your protocol before you start screening?
+
+::: {.callout-tip collapse="true"}
+## Answer
+So that decisions (question, outcomes, analysis) are fixed before you know the results. Registration protects against selective reporting and outcome switching, and makes your review transparent.
+:::
+
+**2.** Your review has two people in the group. How do you organise screening in Covidence?
+
+::: {.callout-tip collapse="true"}
+## Answer
+Both screen all titles and abstracts independently (dual screening); Covidence lists the conflicts, which you resolve by discussion. Repeat for the full texts, recording a reason for each exclusion.
+:::

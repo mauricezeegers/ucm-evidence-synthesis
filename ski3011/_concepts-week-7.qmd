@@ -1,0 +1,9 @@
+## Working with AI on your project
+
+From this week on you may let AI tools such as Claude Code do part of the work. Some rules of thumb:
+
+* **You stay the author.** Check every number, figure and line of code that ends up in your paper. You must be able to explain your R script line by line.
+* **Ask for code, then read it.** Let the AI explain each step, and compare the output with what you would expect from the concepts of weeks 2 to 6.
+* **Keep it reproducible.** One raw data file and one script; the final script must run from top to bottom without the AI.
+* **Report it.** Add a short AI-use paragraph to your methods: which tool, for which tasks, and how you checked the output.
+* **Data protection.** Never upload data with personal information to an AI tool.

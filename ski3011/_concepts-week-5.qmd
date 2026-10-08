@@ -1,0 +1,79 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 4 (next week's tutorial).
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| τ² and τ | Variance and SD of the true effects between studies. |
+| I² | Share of the total variability due to heterogeneity rather than chance. |
+| H² | Total variability divided by sampling variability (1 = no heterogeneity). |
+| Q test | Tests whether there is more variation than expected by chance; low power with few studies. |
+| Prediction interval | Where the true effect of a new study is expected to fall: `predict(res)` columns `pi.lb`, `pi.ub`. |
+| `funnel(res)` | Funnel plot of effect against standard error. |
+| `regtest(res)` | Egger's regression test for funnel plot asymmetry. |
+| `trimfill(res)` | Estimates the number of "missing" studies and an adjusted pooled estimate. |
+| `leave1out(res)` | Repeats the analysis leaving out each study once: is one study driving the result? |
+| `cumul(res)` | Cumulative meta-analysis: adds the studies one by one, usually in order of publication. |
+| Small-study effects | Smaller studies showing larger effects; publication bias is one possible cause. |
+
+### Practice questions
+
+For the BCG meta-analysis (13 trials):
+
+```r
+predict(res, transf = exp)
+```
+```
+ pred ci.lb ci.ub pi.lb pi.ub
+ 0.49  0.34  0.70  0.15  1.55
+```
+```r
+regtest(res)
+```
+```
+Test for Funnel Plot Asymmetry: z = -0.80, p = 0.42
+```
+```r
+trimfill(res)
+```
+```
+Estimated number of missing studies on the right side: 1 (SE = 2.45)
+...
+estimate    se   zval  pval  ci.lb  ci.ub
+   -0.66  0.18  -3.68  <.01  -1.01  -0.31
+```
+
+**1.** Interpret the prediction interval. Why is it so much wider than the CI?
+
+::: {.callout-tip collapse="true"}
+## Answer
+The true RR in a new setting could lie anywhere from 0.15 (strong protection) to 1.55 (harm). It is much wider than the CI (0.34 to 0.70) because τ² is large (0.31): the effect of BCG differs a lot between settings.
+:::
+
+**2.** Is there evidence of publication bias?
+
+::: {.callout-tip collapse="true"}
+## Answer
+No: Egger's test is not significant (p = 0.42), and trim-and-fill adds only one study, with an adjusted RR of exp(−0.66) = 0.52 instead of 0.49. The conclusion does not change.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, no devices.
+
+1. Output shows `I^2: 92.22%` and `Q(df = 12) = 152.23, p-val < .01`. Interpret both. (2 points)
+2. What does `leave1out(res)` do, and when is it useful? (2 points)
+3. Sketch a funnel plot that suggests publication bias, and explain. (2 points)
+4. Why should you be careful with Egger's test in a meta-analysis of 6 studies? (2 points)
+5. What is the difference between the 95% CI and the 95% prediction interval of a random-effects model? (2 points)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. 92% of the variability reflects real differences between studies (very high heterogeneity); the Q test confirms more variation than chance would explain.
+2. It refits the model k times, each time without one study, so you see whether a single study (an outlier or a very large study) drives the pooled estimate or the heterogeneity.
+3. An asymmetric funnel: small studies (bottom, large SE) only on the side of large effects, missing on the side of small or null effects. Small null studies were probably not published.
+4. With few studies the test has very low power: a non-significant result does not rule out bias. A common rule is to use it only with 10 or more studies.
+5. The CI describes the uncertainty about the average effect; the prediction interval also includes τ² and describes the range of true effects in new settings.
+:::

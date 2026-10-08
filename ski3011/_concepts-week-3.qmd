@@ -1,0 +1,83 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 2 (next week's tutorial). Work through the lecture script and the BCG example yourself.
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| `escalc()` | Calculates an effect size `yi` and its sampling variance `vi` for every study and adds them to the data frame. |
+| `measure =` | The effect size: `"RR"`, `"OR"`, `"RD"`, `"MD"`, `"SMD"`, `"PR"` (proportion), `"ZCOR"` (Fisher's z of a correlation). |
+| `yi`, `vi` | Effect size and its variance (variance = SE²); ratios are stored as logs. |
+| `rma(yi, vi, data = dat)` | Fits a random-effects meta-analysis (default estimator of τ²: REML). |
+| `method = "FE"` | Fixed-effect (common-effect) model instead of random effects. |
+| `print(res, digits = 2)` | Shows the output: τ², I², Q test, pooled estimate with SE, z, p and CI. |
+| `predict(res, transf = exp)` | Back-transforms the pooled log RR or log OR, with CI and prediction interval. |
+| `forest(res)` | Draws the forest plot; `atransf = exp` shows ratios instead of logs. |
+| `slab =` | Study labels in the forest plot, e.g. `paste(author, year)`. |
+| Fisher's z | Correlations are pooled after transformation to z and transformed back with `transf.ztor`. |
+
+### Practice questions
+
+The BCG data contain 13 trials of the BCG vaccine against tuberculosis.
+
+```r
+dat <- escalc(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg,
+              data = dat.bcg, slab = paste(author, year))
+res <- rma(yi, vi, data = dat)
+print(res, digits = 2)
+```
+```
+Random-Effects Model (k = 13; tau^2 estimator: REML)
+
+tau^2 (estimated amount of total heterogeneity): 0.31 (SE = 0.17)
+I^2 (total heterogeneity / total variability):   92.22%
+
+Test for Heterogeneity:
+Q(df = 12) = 152.23, p-val < .01
+
+Model Results:
+
+estimate    se   zval  pval  ci.lb  ci.ub
+   -0.71  0.18  -3.97  <.01  -1.07  -0.36  ***
+```
+
+**1.** What do `ai`, `bi`, `ci` and `di` stand for, and what does `escalc()` add to the data?
+
+::: {.callout-tip collapse="true"}
+## Answer
+The four cells of the 2×2 table: vaccinated TB-positive, vaccinated TB-negative, control TB-positive, control TB-negative. `escalc()` adds `yi` (the log risk ratio) and `vi` (its variance) for each trial.
+:::
+
+**2.** Report the pooled risk ratio with its 95% CI.
+
+::: {.callout-tip collapse="true"}
+## Answer
+The estimate is on the log scale: RR = exp(−0.71) = **0.49**, CI exp(−1.07) to exp(−0.36) = **0.34 to 0.70**. `predict(res, transf = exp)` gives this directly. Vaccinated people have about half the risk of TB.
+:::
+
+**3.** Which model was fitted, and how would you fit the fixed-effect model?
+
+::: {.callout-tip collapse="true"}
+## Answer
+A random-effects model with REML (the default of `rma()`). Fixed effect: `rma(yi, vi, data = dat, method = "FE")`.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, no devices.
+
+1. Which `measure =` would you use for (a) the proportion of patients with a complication, (b) correlations between two test scores, (c) mean pain scores in two groups measured on the same scale? (3 points)
+2. What is the difference between `yi` and `vi`? (1 point)
+3. A meta-analysis of proportions gives `estimate 0.49, ci.lb 0.41, ci.ub 0.57` with `measure = "PR"`. Interpret this result. (2 points)
+4. Why are correlations transformed to Fisher's z before pooling, and how do you transform the result back? (2 points)
+5. What does the argument `slab = paste(author, year)` do? (2 points)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. (a) `"PR"`, (b) `"ZCOR"` (or `"COR"`), (c) `"MD"`.
+2. `yi` is the effect size of each study, `vi` its sampling variance (SE²).
+3. The pooled proportion is 49%, 95% CI 41% to 57%. (Proportions are pooled on the raw scale here, so no back-transformation is needed.)
+4. The sampling distribution of r is skewed and its variance depends on r; Fisher's z is approximately normal with variance 1/(n − 3). Back-transform with `predict(res, transf = transf.ztor)`.
+5. It creates study labels ("Aronson 1948") that are shown in the output and the forest plot.
+:::

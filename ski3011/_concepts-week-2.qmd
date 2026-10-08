@@ -1,0 +1,77 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 1 (next week's tutorial): you read R code and output and explain what it does. Work through the lecture script `Week 2_Intro.R` yourself.
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| Object and `<-` | `x <- 5` stores the value 5 in an object called `x`. |
+| Vector, `c()` | `c(9, 3, 6)` combines values into one vector, like a column in a spreadsheet. |
+| Function | A command with arguments in brackets, such as `mean(x)` or `log(x)`; `?mean` opens the help page. |
+| `log()` and `exp()` | Natural logarithm and its inverse; used to move ratios to and from the log scale. |
+| Data frame | A table with one row per study and one column per variable: `data.frame()` or `read.csv()`. |
+| `$` | Selects a column: `dat$n` is the column `n` of the data frame `dat`. |
+| `[ ]` | Selects elements: `dat$n[2]` is the second value, `dat[2, ]` the second row. |
+| `read.csv(..., sep = ";")` | Reads a csv file; the separator must match the file (European csv files often use `;`). |
+| `class()` | Shows the type of an object: numeric, character, logical, factor, data.frame. |
+| Factor | A categorical variable with levels, e.g. study design. |
+| `NA` | A missing value. |
+| Package | `install.packages("metafor")` installs once; `library(metafor)` loads it in every session. |
+| Working directory | The folder R reads from and writes to: `getwd()`, `setwd()`. |
+| Comment `#` | Text after `#` is not run; use it to explain your code. |
+| Basic plots | `hist()`, `boxplot()`, `plot()` with arguments such as `main`, `xlab`, `col`. |
+
+### Practice questions
+
+**1.** What does R print?
+
+```r
+x <- c(12, 8, 15, 10)
+mean(x)
+```
+
+::: {.callout-tip collapse="true"}
+## Answer
+`[1] 11.25`, the mean of the four values.
+:::
+
+**2.** What do the last three lines print?
+
+```r
+d <- data.frame(study = c("A", "B", "C"), n = c(120, 85, 240))
+nrow(d)
+d$n[2]
+sum(d$n)
+```
+
+::: {.callout-tip collapse="true"}
+## Answer
+`3` (three rows/studies), `85` (the second value of column `n`), `445` (the total sample size).
+:::
+
+**3.** `read.csv("pain VAS.csv")` gives a data frame with only one column, in which all values are glued together with semicolons. What went wrong and how do you fix it?
+
+::: {.callout-tip collapse="true"}
+## Answer
+The file uses `;` as separator, while `read.csv()` expects commas. Use `read.csv("pain VAS.csv", sep = ";")`.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, no devices.
+
+1. What is the difference between `install.packages("meta")` and `library(meta)`? (2 points)
+2. What does `exp(log(1.5))` return, and why? (2 points)
+3. Explain each part of `dat$year[dat$n > 100]`. (2 points)
+4. `class(dat$or)` returns `"character"` while the column contains odds ratios such as `1,25`. What is the likely cause and how do you fix it when reading the file? (2 points)
+5. Why is it good practice to keep only two files, a raw data file and a script, and never to change the raw data by hand? (2 points)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. `install.packages()` downloads and installs the package once on your computer; `library()` loads it into the current R session, every time you start R.
+2. `1.5`: `exp()` is the inverse of the natural logarithm.
+3. `dat$year` takes the column `year`; `dat$n > 100` gives TRUE/FALSE per row; the square brackets keep the years of the studies with more than 100 participants.
+4. Decimal commas: R reads `1,25` as text. Use `read.csv(..., sep = ";", dec = ",")`.
+5. Reproducibility: every change to the data is documented in the script, so anyone (including you later) can redo the analysis from the raw data and check it.
+:::

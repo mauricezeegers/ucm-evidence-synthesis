@@ -1,0 +1,11 @@
+## Revision
+
+There are no new concepts this week: the lecture is an optional Q&A. Use the time to prepare Quiz 4 with the [week 4 concept list](week-4.qmd) and to finish your 4th draft.
+
+### Checklist for your 4th draft
+
+* Title, introduction ending with a clear review question (PECO).
+* Methods: eligibility criteria, search, selection, data extraction, risk of bias (NOS), statistical analysis (effect measure, model, heterogeneity), AI-use paragraph.
+* Results: PRISMA flow diagram, table of study characteristics, risk-of-bias plot, forest plot, heterogeneity, funnel plot.
+* Discussion: main finding, comparison with other reviews, strengths and limitations (including risk of bias), conclusion.
+* Every number in the text matches the tables and figures. Check against the PRISMA 2020 checklist.

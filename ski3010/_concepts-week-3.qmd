@@ -1,0 +1,74 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 3 (next week's tutorial, after carnival). Use the exercise "Meta-analysis by hand" from the tutorial as extra practice.
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| Effect size | The measure of association that is pooled across studies, for example the OR, RR or a mean difference. |
+| Log scale | Ratios are pooled as ln(OR) or ln(RR) because their sampling distribution is symmetric on the log scale; results are transformed back with exp(). |
+| SE from a confidence interval | SE = [ln(upper) − ln(lower)] / 3.92. |
+| Inverse-variance weight | Each study gets weight w = 1 / SE²: precise (usually larger) studies count more. |
+| Pooled estimate | The weighted average of the study effects: Σ(w × ln OR) / Σw, transformed back with exp(). |
+| SE of the pooled estimate | 1 / √Σw. |
+| Fixed-effect model | Assumes all studies estimate one common true effect; differences are due to chance only. |
+| Random-effects model | Assumes the true effects differ between studies and estimates their average; adds the between-study variance τ² to each study's variance. |
+| Heterogeneity | Variation in study results beyond what chance would explain. |
+| Cochran's Q | Σ w × (ln OR − pooled ln OR)²; compared with its degrees of freedom (k − 1). |
+| I² | (Q − df) / Q × 100%: the share of the variation that is due to real differences between studies rather than chance (0% if Q < df). |
+| τ² (tau-squared) | The variance of the true effects between studies, used in the random-effects model. |
+| Forest plot | Graph of each study's estimate and CI (box size = weight) with the pooled estimate as a diamond. |
+
+### Practice questions
+
+**1.** Three studies report: A, OR 1.20 (95% CI 0.80 to 1.80); B, OR 0.90 (0.70 to 1.16); C, OR 1.05 (0.85 to 1.30). Calculate ln(OR), SE and weight for each study.
+
+::: {.callout-tip collapse="true"}
+## Answer
+| Study | ln(OR) | SE | w = 1/SE² |
+|---|---|---|---|
+| A | 0.182 | (0.588 + 0.223)/3.92 = 0.207 | 23.4 |
+| B | −0.105 | (0.148 + 0.357)/3.92 = 0.129 | 60.2 |
+| C | 0.049 | (0.262 + 0.163)/3.92 = 0.108 | 85.1 |
+:::
+
+**2.** Calculate the fixed-effect pooled OR and its 95% CI.
+
+::: {.callout-tip collapse="true"}
+## Answer
+Σw = 168.7; Σ(w × ln OR) = 4.26 − 6.35 + 4.15 = 2.07; pooled ln OR = 2.07/168.7 = 0.012, so OR = **1.01**. SE = 1/√168.7 = 0.077; CI = exp(0.012 ± 1.96 × 0.077) = **0.87 to 1.18**.
+:::
+
+**3.** Q = 1.62 with 2 degrees of freedom. What is I², and what does that mean?
+
+::: {.callout-tip collapse="true"}
+## Answer
+Q is smaller than df, so I² = **0%**: the differences between the three studies are compatible with chance alone, and fixed- and random-effects models give the same result.
+:::
+
+**4.** Which study has the largest weight, and why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+Study C (about 50% of the total weight): it has the narrowest CI, so the smallest SE and the largest inverse-variance weight.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, calculator allowed.
+
+1. Why are odds ratios pooled on the log scale? (1 point)
+2. A study reports OR 2.00 (95% CI 1.20 to 3.33). Calculate its SE and its weight. (2 points)
+3. Explain the difference between a fixed-effect and a random-effects model. (2 points)
+4. A meta-analysis reports I² = 83%. What does this mean, and what should the authors do next? (2 points)
+5. In a forest plot, what do the size of the box and the width of the diamond represent? (1 point)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. Ratios are skewed (0 to infinity, with 1 as null); on the log scale they are symmetric around 0 and approximately normally distributed.
+2. SE = [ln(3.33) − ln(1.20)] / 3.92 = (1.203 − 0.182)/3.92 = **0.260**; w = 1/0.260² = **14.8**.
+3. Fixed effect: one common true effect, differences are chance only. Random effects: true effects vary between studies; the model estimates their mean and gives relatively more weight to small studies.
+4. Most of the variation (83%) reflects real differences between studies. Use a random-effects model and explore the sources of heterogeneity (e.g. subgroups by design or population), and be careful with one pooled number.
+5. Box size: the weight of the study. Diamond width: the 95% CI of the pooled estimate.
+:::

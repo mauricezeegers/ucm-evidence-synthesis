@@ -1,0 +1,60 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 4 (next week's tutorial): reading and interpreting the output of a meta-analysis in JASP.
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| Input in JASP | One row per study with the effect size (e.g. ln OR) and its standard error, or the 2×2 counts. |
+| Estimation method | How τ² is estimated, for example restricted maximum likelihood (REML) or DerSimonian-Laird. |
+| Pooled estimate output | Given on the log scale for ratios; transform back with exp() to report an OR or RR. |
+| Test of residual heterogeneity | The Q test: a small p-value indicates more variation than expected by chance. |
+| Prediction interval | The range in which the true effect of a new, similar study is expected to fall; wider than the CI when τ² > 0. |
+| Funnel plot | Each study's effect against its precision; asymmetry can point to publication bias or small-study effects. |
+| Publication bias | Studies with significant or "positive" results are more likely to be published, which biases the pooled estimate. |
+| Egger's test | Regression test for funnel plot asymmetry; a small p-value suggests small-study effects. |
+| Sensitivity analysis | Repeating the analysis with different choices (e.g. excluding high risk-of-bias studies, or one study at a time) to see whether the conclusion holds. |
+| Subgroup analysis | Pooling separately within groups of studies (e.g. cohort versus case-control) to explore heterogeneity. |
+
+### Practice questions
+
+**1.** JASP reports a pooled estimate of 0.020 (95% CI −0.094 to 0.134) for ln(OR). What is the pooled OR and its CI?
+
+::: {.callout-tip collapse="true"}
+## Answer
+exp(0.020) = **1.02**; CI exp(−0.094) to exp(0.134) = **0.91 to 1.14**.
+:::
+
+**2.** The output shows Q(7) = 7.95, p = 0.34, I² = 12% and τ² = 0.004. Interpret.
+
+::: {.callout-tip collapse="true"}
+## Answer
+There is little heterogeneity: Q is close to its degrees of freedom, the test is not significant and only 12% of the variation is attributed to real differences between studies.
+:::
+
+**3.** The funnel plot looks symmetric and Egger's test gives p = 0.40. What can and can't you conclude?
+
+::: {.callout-tip collapse="true"}
+## Answer
+There is no evidence of small-study effects or publication bias. With few studies (fewer than about 10) these tests have little power, so you cannot rule publication bias out.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, calculator allowed.
+
+1. Which two columns does JASP need at minimum to run a meta-analysis of odds ratios from published results? (1 point)
+2. The pooled estimate is −0.223 on the log scale. What is the pooled OR, and what does it mean? (2 points)
+3. Explain the difference between the 95% confidence interval and the 95% prediction interval. (2 points)
+4. What is a funnel plot, and what pattern would make you suspect publication bias? (2 points)
+5. Give one example of a sensitivity analysis for the thimerosal review. (1 point)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. The effect size (ln OR) and its standard error (or the 2×2 counts per study).
+2. exp(−0.223) = **0.80**: on average 20% lower odds of the outcome in the exposed.
+3. The CI shows the uncertainty about the *average* effect; the prediction interval shows where the *true effect of a new study* is likely to fall, including between-study variation.
+4. A plot of effect size against precision (SE). Suspicious: an asymmetric funnel, with small studies missing on one side (usually the side of null or harmful results).
+5. For example: leave out the studies with a high risk of bias, leave out the Geier studies, or compare cohort and case-control studies.
+:::

@@ -1,0 +1,84 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 5 (next week's tutorial).
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| Subgroup analysis | Pooling separately in groups of studies (e.g. by design) and testing whether the subgroup estimates differ. |
+| Meta-regression | Regression of the effect size on a study characteristic (moderator): `rma(yi, vi, mods = ~ x, data = dat)`. |
+| Moderator | A study-level variable that may explain heterogeneity, such as latitude, year or risk of bias. |
+| `factor()` | Treats a moderator as categorical; R then estimates one coefficient per level against a reference level. |
+| `intrcpt` | The expected effect size when the moderator is 0 (or at the reference level). |
+| Slope | The change in effect size (on the log scale for ratios) per unit increase of the moderator. |
+| QM (test of moderators) | Tests whether the moderator(s) explain part of the heterogeneity. |
+| QE (residual heterogeneity) | Tests whether heterogeneity remains after accounting for the moderators. |
+| R² | The proportion of τ² explained by the moderators. |
+| Ecological fallacy | Associations across studies (study averages) do not necessarily hold for individuals. |
+| Rule of thumb | Meta-regression needs about 10 studies per moderator. |
+
+### Practice questions
+
+```r
+rma(yi, vi, mods = ~ ablat, data = dat)
+```
+```
+Mixed-Effects Model (k = 13; tau^2 estimator: REML)
+
+tau^2 (estimated amount of residual heterogeneity):     0.076 (SE = 0.059)
+I^2 (residual heterogeneity / unaccounted variability): 68.39%
+R^2 (amount of heterogeneity accounted for):            75.62%
+
+Test for Residual Heterogeneity:
+QE(df = 11) = 30.733, p-val = 0.001
+
+Test of Moderators (coefficient 2):
+QM(df = 1) = 16.357, p-val < .001
+
+Model Results:
+
+         estimate     se    zval   pval   ci.lb   ci.ub
+intrcpt     0.251  0.249   1.009  0.313  -0.237   0.740
+ablat      -0.029  0.007  -4.044  <.001  -0.043  -0.015  ***
+```
+
+**1.** `ablat` is the absolute latitude of the trial site. Interpret its coefficient.
+
+::: {.callout-tip collapse="true"}
+## Answer
+Per degree further from the equator, the log RR decreases by 0.029: the RR is multiplied by exp(−0.029) = 0.97. BCG protects better further from the equator, and this is statistically significant (p < .001).
+:::
+
+**2.** How much heterogeneity is explained, and is there heterogeneity left?
+
+::: {.callout-tip collapse="true"}
+## Answer
+R² = 76% of τ² is explained by latitude. The QE test is still significant (p = 0.001) and I² is 68%: considerable heterogeneity remains.
+:::
+
+**3.** Explain what the intercept means here, and why it is not very useful.
+
+::: {.callout-tip collapse="true"}
+## Answer
+It is the predicted log RR at latitude 0 (the equator): RR = exp(0.251) = 1.29. No trial was done near latitude 0, so this is an extrapolation.
+:::
+
+### Practice quiz
+
+15 minutes, on paper, no devices.
+
+1. Write the code for a meta-regression of `yi` on the categorical moderator `design` (cohort / case-control). (2 points)
+2. The output of that model shows `QM(df = 1) = 1.77, p-val = 0.18`. What do you conclude? (2 points)
+3. What is the difference between QM and QE? (2 points)
+4. A meta-regression of 12 studies on mean age finds that the effect is larger in studies with older participants. Can you conclude that the treatment works better in older individuals? (2 points)
+5. Why should moderators be specified in the protocol? (2 points)
+
+::: {.callout-tip collapse="true"}
+## Answers
+1. `rma(yi, vi, mods = ~ factor(design), data = dat)`
+2. Design does not significantly explain the heterogeneity; there is no evidence that the effect differs between cohort and case-control studies (absence of evidence, not evidence of absence).
+3. QM tests whether the moderators explain heterogeneity; QE tests whether heterogeneity remains that the moderators do not explain.
+4. No: this is an association across studies (ecological fallacy); individual-level data would be needed. With 12 studies the analysis also has little power and may be confounded by other study characteristics.
+5. To prevent data dredging: testing many moderators after seeing the data gives false positive findings.
+:::
