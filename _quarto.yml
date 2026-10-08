@@ -64,7 +64,11 @@ website:
         - ski3011/schedule.qmd
         - section: "R lectures"
           contents:
+            - ski3011/r-lecture-2.qmd
             - ski3011/r-lecture-3.qmd
+            - ski3011/r-lecture-4.qmd
+            - ski3011/r-lecture-5.qmd
+            - ski3011/r-lecture-6.qmd
         - section: "Weeks"
           contents:
             - ski3011/week-1.qmd

@@ -1,0 +1,113 @@
+### R lecture 5: Heterogeneity and publication bias
+### UCM SKI3011 Evidence Synthesis 2 · https://ucm.meta-research.nl
+### Run this script line by line: put the cursor on a line and press Cmd+Enter (Mac) or Ctrl+Enter (Windows).
+
+# Packages and data ----
+
+# We start again with the BCG trials of lecture 3.
+
+library(metafor)
+library(metadat)
+dat <- escalc(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg,
+              data = dat.bcg, slab = paste(author, year))
+res <- rma(yi, vi, data = dat)
+
+# How much heterogeneity? ----
+
+# * tau^2 (τ²): the variance of the true effects between studies; tau is its square root.
+# * I^2: the share of the total variability due to real differences between studies rather
+# than chance.
+# * H^2: total variability divided by sampling variability (1 means no heterogeneity).
+# * The Q test: is there more variation than chance would explain? It has little power
+# when there are few studies.
+
+print(res, digits = 2)
+confint(res, digits = 2)   # confidence intervals for tau^2 and I^2
+
+# I² is 92% (95% CI 82% to 98%): the effect of BCG differs strongly between trials.
+
+# The prediction interval ----
+
+# The confidence interval tells you how precisely the average effect is estimated. The
+# prediction interval (pi.lb, pi.ub) tells you where the true effect of a new trial is
+# expected to fall. With large τ² it is much wider.
+
+predict(res, transf = exp, digits = 2)
+
+# On average BCG halves the risk (RR 0.49), but in a new setting the effect could be
+# anything from strong protection (0.15) to no protection or even harm (1.55).
+
+# Is one study driving the result? ----
+
+# leave1out() repeats the meta-analysis k times, each time without one study. If the
+# pooled estimate or I² changes a lot when one study is left out, that study is
+# influential.
+
+leave1out(res, transf = exp, digits = 2)
+
+# influence() gives formal diagnostics: studies marked with an asterisk are influential.
+
+inf <- influence(res)
+print(inf, digits = 2)
+plot(inf)
+
+# Cumulative meta-analysis ----
+
+# A cumulative meta-analysis adds the studies one by one, here in order of publication
+# year. It shows how the evidence developed over time.
+
+cum <- cumul(res, order = dat$year)
+forest(cum, atransf = exp, header = TRUE)
+
+# Publication bias: the magnesium story ----
+
+# 16 trials of intravenous magnesium after a heart attack, outcome death (dat.egger2001).
+# The small early trials suggested a large benefit. The last trial, ISIS-4 (1995),
+# included more than 58,000 patients and found no benefit.
+
+mag <- escalc(measure = "OR", ai = ai, n1i = n1i, ci = ci, n2i = n2i,
+              data = dat.egger2001, slab = paste(study, year))
+res_mag <- rma(yi, vi, data = mag)
+predict(res_mag, transf = exp, digits = 2)
+
+# The funnel plot ----
+
+# A funnel plot shows each study's effect against its standard error. Without bias, small
+# studies (at the bottom) scatter symmetrically around the pooled estimate. Here the small
+# studies all sit on the side of a large benefit: the funnel is asymmetric.
+
+funnel(res_mag, atransf = exp, xlab = "Odds ratio (log scale)")
+
+# Egger's test ----
+
+# regtest() tests funnel plot asymmetry. The limit estimate is the expected effect of an
+# infinitely large study (standard error → 0).
+
+regtest(res_mag)
+
+# The test is clearly significant, and the limit estimate is close to 0 on the log scale
+# (an OR of about 1): exactly what ISIS-4 found.
+
+# Trim-and-fill ----
+
+# trimfill() estimates how many studies are "missing" and what the pooled estimate would
+# be if they were added. The filled studies appear as open circles in the funnel plot.
+
+tf <- trimfill(res_mag)
+predict(tf, transf = exp, digits = 2)
+funnel(tf, atransf = exp, xlab = "Odds ratio (log scale)")
+
+# After filling 7 studies the OR rises from 0.46 to 0.68 and is no longer statistically
+# significant. Trim-and-fill is a sensitivity analysis, not a correction: it shows how
+# fragile the result is.
+
+# Small-study effects are not always publication bias ----
+
+# Funnel plot asymmetry means that small studies show different effects than large ones.
+# Publication bias is one explanation; others are lower quality of small trials, different
+# patients, or chance. With fewer than about 10 studies these tests have little power.
+
+# Check yourself ----
+
+# Go to the concept list and practice quiz of week 5 and try the practice quiz without
+# looking at this page.

@@ -26,6 +26,10 @@ weeks:
   - week: 2
     date: 2027-04-07
     theme: "R basics"
+    links:
+      - {text: "R lecture 2: explanation, code and output", href: "r-lecture-2.qmd"}
+      - {text: "R lecture 2: R script to run line by line in RStudio", href: "../materials/ski3011/week-2/r-lecture-2.R"}
+      - {text: "Practice file bcg.csv", href: "../materials/ski3011/week-2/bcg.csv"}
     lecture:
       - "R basics: R as a calculator, vectors, data frames, importing data, scripts, basic plots"
     tutorial:
@@ -53,6 +57,9 @@ weeks:
   - week: 4
     date: 2027-04-21
     theme: "Meta-analysis in R II"
+    links:
+      - {text: "R lecture 4: explanation, code and output", href: "r-lecture-4.qmd"}
+      - {text: "R lecture 4: R script to run line by line in RStudio", href: "../materials/ski3011/week-4/r-lecture-4.R"}
     lecture:
       - "Binary (RR, OR) and continuous (MD, SMD) outcomes"
     quiz: {n: 2, topic: "Interpreting R code and output from lecture 3 (meta-analysis in R I)"}
@@ -63,6 +70,9 @@ weeks:
   - week: 5
     date: 2027-04-28
     theme: "Heterogeneity and publication bias"
+    links:
+      - {text: "R lecture 5: explanation, code and output", href: "r-lecture-5.qmd"}
+      - {text: "R lecture 5: R script to run line by line in RStudio", href: "../materials/ski3011/week-5/r-lecture-5.R"}
     lecture:
       - "I², tau², prediction interval"
       - "Funnel plot, Egger test, trim-and-fill"
@@ -75,6 +85,9 @@ weeks:
   - week: 6
     date: 2027-05-04  # Tuesday: Wednesday 5 May is Liberation Day
     theme: "Subgroups, meta-regression and peer review"
+    links:
+      - {text: "R lecture 6: explanation, code and output", href: "r-lecture-6.qmd"}
+      - {text: "R lecture 6: R script to run line by line in RStudio", href: "../materials/ski3011/week-6/r-lecture-6.R"}
     lecture:
       - Subgroup analysis and meta-regression
     quiz: {n: 4, topic: "Interpreting R code and output from lecture 5 (heterogeneity and publication bias)"}

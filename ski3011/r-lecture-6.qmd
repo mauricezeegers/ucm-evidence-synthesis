@@ -1,0 +1,113 @@
+---
+title: "R lecture 6: Subgroup analysis and meta-regression"
+subtitle: "SKI3011 · categorical and continuous moderators, QM, QE, R²"
+# This page is also the lecture script: scripts/render-r-lectures.sh turns it into an .R file
+# in which all text below becomes comments, so students can run it line by line in RStudio.
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+**How to use this lecture.** Download the R script, open it in RStudio and run it line by line (Cmd+Enter on a Mac, Ctrl+Enter on Windows). All explanations on this page are in the script as comments. Check that you get the same output as shown here. Quiz 5 asks you to read and interpret exactly this kind of code and output.
+
+[Download the R script](../materials/ski3011/week-6/r-lecture-6.R){.btn .btn-primary}
+
+## Why subgroups and meta-regression?
+
+Last week we saw large heterogeneity in the BCG trials. Can study characteristics (moderators) explain it? A **subgroup analysis** compares groups of studies; a **meta-regression** models the effect size as a function of a moderator. Both are observational: they compare studies, not patients.
+
+```{r}
+library(metafor)
+library(metadat)
+dat <- escalc(measure = "RR", ai = tpos, bi = tneg, ci = cpos, di = cneg,
+              data = dat.bcg, slab = paste(author, year))
+```
+
+## Subgroups: separate meta-analyses
+
+How were people allocated to vaccine or control? Randomly, alternately or systematically. First we pool each subgroup separately.
+
+```{r}
+table(dat$alloc)
+res_random     <- rma(yi, vi, data = dat, subset = alloc == "random")
+res_alternate  <- rma(yi, vi, data = dat, subset = alloc == "alternate")
+res_systematic <- rma(yi, vi, data = dat, subset = alloc == "systematic")
+predict(res_random, transf = exp, digits = 2)
+predict(res_systematic, transf = exp, digits = 2)
+```
+
+## Subgroups: testing the difference
+
+Do the subgroups really differ? Put the subgroup variable as a categorical moderator in the model with `mods = ~ factor(...)`. `QM` (the test of moderators) tests whether the moderator explains heterogeneity; `QE` tests whether heterogeneity remains.
+
+```{r}
+res_alloc <- rma(yi, vi, mods = ~ factor(alloc), data = dat)
+print(res_alloc, digits = 2)
+```
+
+The intercept is the reference group (alternate allocation); the other coefficients are differences from it. QM is not significant (p = 0.41) and R² is 0%: allocation method does not explain the heterogeneity.
+
+## A subgroup that does matter
+
+Back to the 35 studies on loss of smell in COVID-19 patients of lecture 3. Studies that measured smell objectively (with a test) find more loss than studies that asked patients (subjective).
+
+```{r}
+smell <- escalc(measure = "PR", xi = xi, ni = ni, data = dat.hannum2020)
+table(smell$objectivity)
+res_smell <- rma(yi, vi, mods = ~ objectivity, data = smell)
+print(res_smell, digits = 2)
+```
+
+Objective measurement: 75% of patients lose their sense of smell; subjective: 0.75 − 0.31 = 44%. The difference is significant (QM p < .01), but with 6 objective studies and still 99% residual heterogeneity.
+
+## Meta-regression with a continuous moderator
+
+Absolute latitude (`ablat`): the distance of the trial site from the equator. One idea is that BCG works better far from the equator, where people are less exposed to other mycobacteria.
+
+```{r}
+res_lat <- rma(yi, vi, mods = ~ ablat, data = dat)
+print(res_lat, digits = 3)
+exp(coef(res_lat)["ablat"])   # change in the risk ratio per degree latitude
+```
+
+Per degree further from the equator the RR is multiplied by 0.97. Latitude explains 76% of τ² (R²), but heterogeneity remains (QE p = 0.001).
+
+## The bubble plot
+
+Each circle is a trial, sized by its weight; the line is the meta-regression.
+
+```{r}
+#| fig-height: 5
+regplot(res_lat, transf = exp, xlab = "Absolute latitude", ylab = "Risk ratio")
+```
+
+`predict()` with `newmods` gives the expected RR at chosen latitudes.
+
+```{r}
+predict(res_lat, newmods = c(10, 30, 50), transf = exp, digits = 2)
+```
+
+## More moderators: writing-to-learn
+
+48 studies on writing-to-learn interventions in school (dat.bangertdrowns2004), outcome as standardised mean difference. Does a longer intervention work better? Does feedback help?
+
+```{r}
+wtl <- dat.bangertdrowns2004
+rma(yi, vi, mods = ~ length, data = wtl, digits = 3)            # length in weeks
+rma(yi, vi, mods = ~ factor(feedback), data = wtl, digits = 2)  # feedback yes/no
+rma(yi, vi, mods = ~ length + factor(wic), data = wtl, digits = 3)   # two moderators
+```
+
+Each extra week adds 0.015 to the SMD (p = 0.04), but R² is only 5%. Feedback does not matter (p = 0.33). With two moderators the length effect is no longer significant. Note the message that studies with missing moderator values are left out.
+
+## Be careful with meta-regression
+
+* About 10 studies per moderator: with fewer you have little power and unstable estimates.
+* Plan moderators in your protocol: testing many moderators afterwards gives false positive findings.
+* Moderators are often correlated with each other (confounding between study characteristics).
+* Ecological fallacy: an association across studies (e.g. with mean age) does not prove the same association within individuals.
+
+## Check yourself
+
+Go to the [concept list and practice quiz of week 6](week-6.qmd) and try the practice quiz without looking at this page.

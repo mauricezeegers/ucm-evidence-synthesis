@@ -30,18 +30,20 @@ lines = [f"### {title}",
          "### Run this script line by line: put the cursor on a line and press Cmd+Enter (Mac) or Ctrl+Enter (Windows).",
          ""]
 in_code = False
+chunk = []
 for raw in text.splitlines():
     if raw.startswith("```"):
         if not in_code and raw.startswith("```{r"):
-            in_code = True
+            in_code, chunk = True, []
         elif in_code:
             in_code = False
-            lines.append("")
+            # chunks marked "#| include: false" only prepare the web page (e.g. folders)
+            if not any(c.replace(" ", "") == "#|include:false" for c in chunk):
+                lines.extend(c for c in chunk if not c.startswith("#|"))
+                lines.append("")
         continue
     if in_code:
-        if raw.startswith("#|"):          # chunk options (figure size) are not R code
-            continue
-        lines.append(raw)
+        chunk.append(raw)
         continue
     if raw.startswith("Download the R script") or "Download the R script" in raw:
         continue

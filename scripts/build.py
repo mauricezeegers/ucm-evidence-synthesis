@@ -107,7 +107,7 @@ def write_schedule(module, data):
 def materials_md(module, n):
     folder = ROOT / "materials" / module / f"week-{n}"
     files = sorted(p for p in folder.glob("*") if p.is_file() and not p.name.startswith(".")) if folder.exists() else []
-    files = [p for p in files if p.suffix != ".R" or not p.name.startswith("r-lecture-")]  # linked via data file
+    files = [p for p in files if not (p.suffix == ".R" and p.name.startswith("r-lecture-")) and p.name != "bcg.csv"]  # linked via data file
     if not files:
         return "" if (folder.exists()) else "Lecture slides and other materials appear here before the lecture.\n"
     return "".join(f"* [{p.name}](../materials/{module}/week-{n}/{p.name.replace(' ', '%20')})\n" for p in files)
