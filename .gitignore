@@ -14,3 +14,6 @@
 /*/week-*.qmd
 /*/_weeks.qmd
 /*/_assessment.qmd
+
+# Leftovers of rendering a single page (the site output goes to _site/)
+/*/*_files/
