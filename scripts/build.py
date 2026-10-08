@@ -107,8 +107,9 @@ def write_schedule(module, data):
 def materials_md(module, n):
     folder = ROOT / "materials" / module / f"week-{n}"
     files = sorted(p for p in folder.glob("*") if p.is_file() and not p.name.startswith(".")) if folder.exists() else []
+    files = [p for p in files if p.suffix != ".R" or not p.name.startswith("r-lecture-")]  # linked via data file
     if not files:
-        return "Lecture slides and other materials appear here before the lecture.\n"
+        return "" if (folder.exists()) else "Lecture slides and other materials appear here before the lecture.\n"
     return "".join(f"* [{p.name}](../materials/{module}/week-{n}/{p.name.replace(' ', '%20')})\n" for p in files)
 
 
@@ -121,7 +122,8 @@ def write_week(module, data, w):
                      "Paper quiz, no devices. Prepare with the concept list and practice questions of last week.\n:::\n")
     if w.get("lecture"):
         lines.append("## Lecture\n" + "".join(f"* {x}\n" for x in w["lecture"]))
-        lines.append("### Slides and materials\n" + materials_md(module, n))
+        links = "".join(f'* [{l["text"]}]({l["href"]})\n' for l in w.get("links", []))
+        lines.append("### Slides and materials\n" + links + materials_md(module, n))
     if w.get("tutorial"):
         lines.append("## Tutorial\n" + "".join(f"* {x}\n" for x in w["tutorial"]))
     if w.get("assignments"):
