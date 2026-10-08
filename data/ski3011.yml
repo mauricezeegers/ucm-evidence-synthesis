@@ -39,9 +39,8 @@ weeks:
     date: 2027-04-14
     theme: "Meta-analysis in R I"
     links:
-      - {text: "R lecture 3: web page with code and output", href: "r-lecture-3.qmd"}
-      - {text: "R lecture 3: slides", href: "r-lecture-3-slides.html"}
-      - {text: "R lecture 3: R script", href: "../materials/ski3011/week-3/r-lecture-3.R"}
+      - {text: "R lecture 3: explanation, code and output", href: "r-lecture-3.qmd"}
+      - {text: "R lecture 3: R script to run line by line in RStudio", href: "../materials/ski3011/week-3/r-lecture-3.R"}
     lecture:
       - "Effect sizes with escalc(), rma(yi, vi), forest plots"
       - Proportions and correlations

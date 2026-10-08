@@ -1,98 +1,68 @@
 ---
 title: "R lecture 3: Meta-analysis in R I"
 subtitle: "SKI3011 · escalc(), rma(), forest plots, proportions and correlations"
-# One source, two outputs: this web page and a slide deck (revealjs).
-# Text inside ::: {.content-visible unless-format="revealjs"} only appears on the web page.
-format:
-  html:
-    code-annotations: below
-    code-tools:
-      source: false
-  revealjs:
-    output-file: r-lecture-3-slides.html
-    slide-number: true
-    code-annotations: below
-    scrollable: true
-    smaller: true
-    theme: default
+# This page is also the lecture script: scripts/render-r-lectures.sh turns it into an .R file
+# in which all text below becomes comments, so students can run it line by line in RStudio.
 execute:
   echo: true
   warning: false
   message: false
 ---
 
-::: {.content-visible unless-format="revealjs"}
-**How to use this page.** This is the full lecture: explanation, R code and the real output. In the carbon-based weeks you type and run every line yourself in RStudio: download the script below, run it line by line, and check that you get the same output. Quiz 2 asks you to read and interpret exactly this kind of code and output.
+**How to use this lecture.** Download the R script, open it in RStudio and run it line by line (Cmd+Enter on a Mac, Ctrl+Enter on Windows). All explanations on this page are in the script as comments. Check that you get the same output as shown here. Quiz 2 asks you to read and interpret exactly this kind of code and output.
 
-* [Download the R script](../materials/ski3011/week-3/r-lecture-3.R)
-* [Open as slides](r-lecture-3-slides.html)
-:::
+[Download the R script](../materials/ski3011/week-3/r-lecture-3.R){.btn .btn-primary}
 
 ## Packages
 
+`install.packages()` installs a package once on your computer; `library()` loads it in every new R session.
+
 ```{r}
-# install.packages(c("metafor", "metadat"))   # once on your computer
+# install.packages(c("metafor", "metadat"))   # run once, remove the # to run it
 library(metafor)   # meta-analysis functions: escalc(), rma(), forest()
 library(metadat)   # example datasets, such as dat.bcg
 ```
 
-::: {.content-visible unless-format="revealjs"}
-`install.packages()` installs a package once; `library()` loads it in every new R session.
-:::
-
 ## The BCG data
 
-13 trials of the BCG vaccine against tuberculosis.
+13 trials of the BCG vaccine against tuberculosis. `tpos` and `tneg` are the TB-positive and TB-negative people in the vaccinated group, `cpos` and `cneg` the same in the control group: the four cells of the 2×2 table. `ablat` is the absolute latitude of the trial site; we use it in week 6.
 
 ```{r}
 head(dat.bcg[, c("author", "year", "tpos", "tneg", "cpos", "cneg", "ablat")], 4)
 ```
 
-::: {.content-visible unless-format="revealjs"}
-`tpos` and `tneg` are the TB-positive and TB-negative people in the vaccinated group, `cpos` and `cneg` the same in the control group: the four cells of the 2×2 table. `ablat` is the absolute latitude of the trial site; we use it in week 6.
-:::
-
 ## Step 1: one effect size per study
 
+`escalc()` adds two columns to the data: `yi`, the **log** risk ratio, and `vi`, its sampling variance (SE²). Ratios are always stored on the log scale.
+
 ```{r}
-dat <- escalc(measure = "RR",                              # <1>
-              ai = tpos, bi = tneg, ci = cpos, di = cneg,  # <2>
+dat <- escalc(measure = "RR",                              # effect size: risk ratio (also "OR", "RD", "MD", "SMD", "PR", "ZCOR")
+              ai = tpos, bi = tneg, ci = cpos, di = cneg,  # the four cells of the 2x2 table
               data = dat.bcg,
-              slab = paste(author, year))                  # <3>
+              slab = paste(author, year))                  # study labels for the output and the forest plot
 head(dat[, c("author", "year", "yi", "vi")], 4)
 ```
-1. The effect size: the risk ratio. Other options: `"OR"`, `"RD"`, `"MD"`, `"SMD"`, `"PR"`, `"ZCOR"`.
-2. The four cells of the 2×2 table.
-3. Study labels for the output and the forest plot.
-
-::: {.content-visible unless-format="revealjs"}
-`escalc()` adds two columns: `yi`, the **log** risk ratio, and `vi`, its sampling variance (SE²). Ratios are always stored on the log scale.
-:::
 
 ## Step 2: random-effects meta-analysis
 
+`rma()` fits a **random-effects** model by default, with τ² estimated by REML. `tau^2`, `I^2` and the Q test describe heterogeneity (week 5). `estimate` is the pooled **log** risk ratio: −0.71.
+
 ```{r}
-res <- rma(yi, vi, data = dat)
+res <- rma(yi, vi, data = dat)   # random-effects model (default method: REML)
 print(res, digits = 2)
 ```
 
-::: {.content-visible unless-format="revealjs"}
-* `rma()` fits a **random-effects** model by default, with τ² estimated by REML.
-* `tau^2`, `I^2` and the Q test describe heterogeneity (week 5).
-* `estimate` is the pooled **log** risk ratio: −0.71.
-:::
-
 ## Step 3: back to the risk ratio scale
 
+`pred` = exp(−0.71) = 0.49: vaccinated people have about half the risk of TB (95% CI 0.34 to 0.70). `pi.lb` and `pi.ub` are the 95% prediction interval: the range in which the true effect of a new trial is expected to fall (week 5).
+
 ```{r}
-predict(res, transf = exp, digits = 2)
+predict(res, transf = exp, digits = 2)   # exp() turns the log risk ratio back into a risk ratio
 ```
 
-::: {.content-visible unless-format="revealjs"}
-`pred` = exp(−0.71) = 0.49: vaccinated people have about half the risk of TB (95% CI 0.34 to 0.70). `pi.lb` and `pi.ub` are the 95% prediction interval: the range in which the true effect of a new trial is expected to fall (week 5).
-:::
-
 ## Step 4: forest plot
+
+`atransf = exp` shows risk ratios on the axis instead of log risk ratios. Box size is the weight of each trial; the diamond is the pooled estimate with its 95% CI.
 
 ```{r}
 #| fig-height: 6
@@ -100,54 +70,35 @@ predict(res, transf = exp, digits = 2)
 forest(res, atransf = exp, header = TRUE)
 ```
 
-::: {.content-visible unless-format="revealjs"}
-`atransf = exp` shows risk ratios on the axis instead of log risk ratios. Box size is the weight of each trial; the diamond is the pooled estimate with its 95% CI.
-:::
-
 ## Fixed effect versus random effects
 
+The fixed-effect model assumes one common true effect. Its CI is much narrower (0.60 to 0.70) because it ignores the large between-trial variation: with heterogeneity this big, the random-effects model is the honest choice.
+
 ```{r}
-res_fe <- rma(yi, vi, data = dat, method = "FE")
+res_fe <- rma(yi, vi, data = dat, method = "FE")   # fixed-effect model
 predict(res_fe, transf = exp, digits = 2)
 ```
 
-::: {.content-visible unless-format="revealjs"}
-The fixed-effect model assumes one common true effect. Its CI is much narrower (0.60 to 0.70) because it ignores the large between-trial variation: with heterogeneity this big, the random-effects model is the honest choice.
-:::
-
 ## Proportions
 
-35 studies on the proportion of COVID-19 patients with loss of smell (dat.hannum2020).
+35 studies on the proportion of COVID-19 patients with loss of smell (dat.hannum2020). About half of the patients (0.49, 95% CI 0.41 to 0.57) lose their sense of smell. Note the enormous heterogeneity: the studies used objective and subjective measurements (we split them in week 6). For proportions near 0 or 1 a transformation such as `"PLO"` (logit) is better.
 
 ```{r}
-dat_pr <- escalc(measure = "PR", xi = xi, ni = ni, data = dat.hannum2020)   # <1>
+dat_pr <- escalc(measure = "PR", xi = xi, ni = ni, data = dat.hannum2020)   # xi = events, ni = sample size
 res_pr <- rma(yi, vi, data = dat_pr)
 print(res_pr, digits = 2)
 ```
-1. `xi` = number of events, `ni` = sample size; `"PR"` pools the raw proportions.
-
-::: {.content-visible unless-format="revealjs"}
-About half of the patients (0.49, 95% CI 0.41 to 0.57) lose their sense of smell. Note the enormous heterogeneity: the studies used objective and subjective measurements (we split them in week 6). For proportions near 0 or 1 a transformation such as `"PLO"` (logit) is better.
-:::
 
 ## Correlations
 
-16 studies on the correlation between conscientiousness and medication adherence (dat.molloy2014).
+16 studies on the correlation between conscientiousness and medication adherence (dat.molloy2014). Correlations are pooled after transformation to Fisher's z and transformed back with `transf.ztor`. More conscientious patients adhere slightly better to their medication: r = 0.15 (95% CI 0.09 to 0.21). The prediction interval (−0.04 to 0.32) shows that in some settings there may be no association at all.
 
 ```{r}
-dat_r <- escalc(measure = "ZCOR", ri = ri, ni = ni, data = dat.molloy2014)   # <1>
+dat_r <- escalc(measure = "ZCOR", ri = ri, ni = ni, data = dat.molloy2014)   # ri = correlation, ni = sample size
 res_r <- rma(yi, vi, data = dat_r)
-predict(res_r, transf = transf.ztor, digits = 2)                               # <2>
+predict(res_r, transf = transf.ztor, digits = 2)   # back from Fisher's z to a correlation
 ```
-1. Correlations are transformed to Fisher's z before pooling.
-2. `transf.ztor` transforms the pooled z back to a correlation.
 
-::: {.content-visible unless-format="revealjs"}
-More conscientious patients adhere slightly better to their medication: r = 0.15 (95% CI 0.09 to 0.21). The prediction interval (−0.04 to 0.32) shows that in some settings there may be no association at all.
-:::
-
-::: {.content-visible unless-format="revealjs"}
 ## Check yourself
 
 Go to the [concept list and practice quiz of week 3](week-3.qmd) and try the practice quiz without looking at this page.
-:::
