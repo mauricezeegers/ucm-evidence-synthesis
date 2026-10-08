@@ -31,6 +31,8 @@ Each tutorial starts with a short paper quiz on the topic of the previous week. 
 | 5 | 2-6 Mar | Optional: QA | **Quiz 4**: meta-analysis in JASP. Meta-analysis in JASP | **A4a**: meta-analysis in JASP. **A4b**: 4th draft incl. discussion (DL 10 Mar 11:59) | Read: RoB tools (SLR), PRISMA 2020 |
 | 6 | 9-13 Mar | Optional: QA | Peer review. Evaluation: written | **A5**: individual peer review (DL 17 Mar 11:59) | Read: Ch. 3 & 4.3 Textbook |
 | 7 | 16-20 Mar | *Exam week* | | **A6**: final draft, incorporate peer review feedback (DL 20 Mar 23:59) | Install: R and RStudio (for SKI3011). Start thinking about your own research topic and group |
+
+: {tbl-colwidths="[5,9,22,22,21,21]"}
 :::
 
 ## Assessment

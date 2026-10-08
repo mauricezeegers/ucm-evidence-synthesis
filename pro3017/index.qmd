@@ -24,6 +24,8 @@ PRO3017 is the final stretch. You turn your SKI3011 draft into a complete manusc
 | 1 | 27 May | Online webinar + QA: from draft to manuscript (abstract, discussion, PRISMA 2020 checklist, AI-use paragraph) | **A1**: presentation slides (DL 2 Jun 23:59) | Write 4th draft: abstract, introduction, methods (incl. AI use), results, discussion, appendices |
 | 2 | 3+4 Jun | **Seminar on campus** (full day) | **A2**: seminar presentation | Process feedback from the seminar |
 | 3 | 10 Jun | Online webinar + QA | **A3**: final manuscript + R code + dataset (DL 12 Jun 23:59) | |
+
+: {tbl-colwidths="[6,10,30,27,27]"}
 :::
 
 ## Assessment

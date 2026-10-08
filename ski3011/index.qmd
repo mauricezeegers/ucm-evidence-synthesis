@@ -31,6 +31,8 @@ The first six weeks are carbon-based. You write your own R code, and each week a
 | 6 | 6 May | Subgroup analysis and meta-regression (mods =) | **Quiz 4**: interpreting R code and output from lecture 5 (heterogeneity and publication bias). Peer review | **A4**: individual peer review (DL 11 May 11:59) | Study: concept list week 6 |
 | 7 | 13 May | From carbon to silicon: Claude Code demo | **Quiz 5**: interpreting R code and output from lecture 6 (subgroup analysis and meta-regression). AI on own project. Evaluation: oral | (none) | Optional: install Claude Code |
 | 8 | 18-22 May | *Exam week* | | **A5**: final draft + R code + dataset (DL 22 May 23:59) | |
+
+: {tbl-colwidths="[5,9,22,22,21,21]"}
 :::
 
 ## Assessment

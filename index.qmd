@@ -14,7 +14,7 @@ This site is under construction for 2026-2027. Dates in the schedules are still 
 
 ::: {.g-col-12 .g-col-md-4}
 ### [SKI3010](ski3010/index.qmd)
-**Evidence Synthesis 1: Study Designs in Systematic Reviewing**
+**Evidence Synthesis 1: Study Designs in Systematic Reviewing**\
 Period 4 · 2.5 ECTS · skills training
 
 Epidemiology and statistics basics, risk of bias and meta-analysis by hand and in JASP. All groups work on one review: thimerosal-containing vaccines and autism.
@@ -22,7 +22,7 @@ Epidemiology and statistics basics, risk of bias and meta-analysis by hand and i
 
 ::: {.g-col-12 .g-col-md-4}
 ### [SKI3011](ski3011/index.qmd)
-**Evidence Synthesis 2: Statistics in Systematic Reviewing**
+**Evidence Synthesis 2: Statistics in Systematic Reviewing**\
 Period 5 · 2.5 ECTS · skills training
 
 Your own topic, your own protocol on protocols.io, and meta-analysis in R. From week 7: Claude Code.
@@ -30,7 +30,7 @@ Your own topic, your own protocol on protocols.io, and meta-analysis in R. From 
 
 ::: {.g-col-12 .g-col-md-4}
 ### [PRO3017](pro3017/index.qmd)
-**Evidence Synthesis 3: Systematic Review Research Project**
+**Evidence Synthesis 3: Systematic Review Research Project**\
 Period 6 · 5 ECTS · project
 
 Finish your manuscript and present it at the seminar on campus.
