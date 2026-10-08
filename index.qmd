@@ -1,0 +1,69 @@
+---
+title: "Evidence Synthesis"
+subtitle: "Systematic reviews and meta-analysis at University College Maastricht, spring semester 2026-2027"
+toc: false
+---
+
+::: {.callout-note}
+This site is under construction for 2026-2027. Dates in the schedules are still those of the 2025-2026 academic calendar and will be updated.
+:::
+
+## The modules
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### [SKI3010](ski3010/index.qmd)
+**Evidence Synthesis 1: Study Designs in Systematic Reviewing**
+Period 4 · 2.5 ECTS · skills training
+
+Epidemiology and statistics basics, risk of bias and meta-analysis by hand and in JASP. All groups work on one review: thimerosal-containing vaccines and autism.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [SKI3011](ski3011/index.qmd)
+**Evidence Synthesis 2: Statistics in Systematic Reviewing**
+Period 5 · 2.5 ECTS · skills training
+
+Your own topic, your own protocol on protocols.io, and meta-analysis in R. From week 7: Claude Code.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### [PRO3017](pro3017/index.qmd)
+**Evidence Synthesis 3: Systematic Review Research Project**
+Period 6 · 5 ECTS · project
+
+Finish your manuscript and present it at the seminar on campus.
+:::
+
+:::
+
+## The semester
+
+About three million scientific articles are published every year, and even a narrow research field can produce tens of thousands of papers annually. During the first wave of COVID-19 alone, more than 23,500 articles appeared on the topic. Researchers, policy makers and research-based professionals need to bring these results together: to support evidence-based decisions and regulatory approval, and to show where further research is needed. Systematic reviews and meta-analyses do this with dedicated study designs, software and statistical methods, and they are used in every research domain.
+
+The semester consists of two skills trainings (periods 4 and 5) and a project (period 6). Together they cover the full process of a systematic literature review (SLR), including meta-analysis: the statistical pooling of the results of the included studies. You will work with JASP and R, register your review protocol on protocols.io, and end the semester with a manuscript of your own systematic review and meta-analysis, which you present at a seminar. Prior experience with statistics or coding helps but is not required.
+
+### Carbon before silicon
+
+AI tools can now search the literature, screen abstracts, extract data and write R code. They are only useful in the hands of someone who can judge their output. That is why you first learn the concepts yourself: in periods 4 and 5, short paper quizzes in the tutorials check whether you understand the epidemiology, the statistics and the R code. From week 7 of SKI3011 the semester turns silicon-based: you will see how Claude Code can carry out a meta-analysis and how to put it to work on your own project. Read the [AI use](ai.qmd) page for the rules.
+
+### Lectures are optional
+
+Every week has a concept list that matches the quiz of the following week, together with practice questions. You decide how you learn: with the concept list and the textbook, with an AI tutor, by attending the lecture, or a combination. The lectures help you separate the main points from the details and show how deep you need to go.
+
+### Good to know
+
+The semester teaches you to read and write academic papers, which makes it good preparation for your capstone and for later academic work. One of our students won the 2024 Dies Natalis Prize for the best bachelor thesis/honours programme. This is not the easiest semester you can take, but it is very doable if you keep up every week.
+
+**Textbook:** *Textbook of Epidemiology*, 2nd edition (Wiley).
+
+## What students say
+
+> "I found the Evidence Synthesis course to be a valuable skills course. It offers a great opportunity to practice using R (or get hands-on experience with it for the first time) and to learn how to write and interpret meta-analyses and systematic reviews. The course is particularly useful for those who enjoy working with data and diagrams and are interested in disciplines that involve synthesising large amounts of quantitative data (e.g., medicine, psychology, economics). The course coordinator and tutor [name removed] explains complex concepts in a clear and understandable way and always provides helpful guidance. The course is well-structured and organized—10/10 would recommend!"
+>
+> Capstone student, 2025
+
+> "The Evidence Synthesis semester was an enriching experience, thoughtfully structured into three modules that allowed for progressive skill-building. The opportunity to work on assignments during class time and receive immediate feedback from both classmates and the tutor made the learning process highly engaging and collaborative. Under [the course coordinator's] guidance, I gained a deep understanding of systematic reviews and meta-analyses, versatile methods applicable across many research areas. This semester has been incredibly rewarding and has significantly enhanced my research skills; I highly recommend it to anyone interested in evidence-based research methods."
+>
+> Awardee of the 2024 Dies Natalis Prize

@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Evidence Synthesis"
+  site-url: https://ucm.meta-research.nl
+  description: "Course website for the Evidence Synthesis semester at University College Maastricht"
+  search: true
+  page-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: ski3010/index.qmd
+        text: "SKI3010"
+      - href: ski3011/index.qmd
+        text: "SKI3011"
+      - href: pro3017/index.qmd
+        text: "PRO3017"
+      - href: ai.qmd
+        text: "AI use"
+    right:
+      - icon: github
+        href: https://github.com/mauricezeegers/ucm-evidence-synthesis
+        aria-label: GitHub
+  page-footer:
+    left: "University College Maastricht"
+    right: "Written and researched with Claude Code support, content verified by the author."
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+    toc: true
+    toc-title: "On this page"
+    lang: en

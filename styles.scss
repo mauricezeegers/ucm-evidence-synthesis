@@ -1,0 +1,12 @@
+/*-- scss:defaults --*/
+// UM orange as the accent colour; change these two lines to restyle the whole site
+$primary: #E84E10;
+$navbar-bg: #E84E10;
+$link-color: #1A5DAB;
+$font-size-root: 17px;
+
+/*-- scss:rules --*/
+// Wide schedule tables: keep them readable and scrollable on phones
+table { font-size: 0.9rem; }
+td, th { vertical-align: top; }
+.quiz { font-weight: 600; color: $primary; }

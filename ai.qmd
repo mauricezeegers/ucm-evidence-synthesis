@@ -1,0 +1,20 @@
+---
+title: "AI use"
+---
+
+You may use generative AI tools (such as Claude, ChatGPT or Copilot) throughout the semester, provided you use them responsibly and transparently. Every paper you submit contains a short paragraph in the methods section stating which tools you used, for which tasks, and how you checked the output. You remain responsible for every number, line of code and sentence you submit.
+
+The semester has two phases.
+
+## Carbon-based: SKI3010 and weeks 1 to 6 of SKI3011
+
+The goal is that you master the concepts and the R code yourself. The paper quizzes, taken in the tutorial without devices, test exactly that. Use AI as a tutor, not as a ghostwriter.
+
+::: {.callout-tip}
+## Switch your AI to learning mode
+Most AI tools have a mode in which they explain and ask questions instead of handing you the answer, for example *Learning mode* in Claude or *Study mode* in ChatGPT. Use it while you work through the concept lists and practice questions.
+:::
+
+## Silicon-based: week 7 of SKI3011 and PRO3017
+
+Lecture 7 of SKI3011 is a demonstration of Claude Code. After that you may also let AI do part of the work in your own project, such as writing and running R code. Using it is optional.
