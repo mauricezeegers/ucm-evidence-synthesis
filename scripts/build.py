@@ -91,8 +91,8 @@ def assessment_md(data):
     return "\n".join(lines) + "\n"
 
 
-NOTE = ("::: {.callout-note}\nDates are placeholders from the 2025-2026 academic calendar "
-        "and will be updated for 2026-2027.\n:::\n\n")
+NOTE = ("::: {.callout-note}\nDates follow the UM academic calendar 2026-2027. "
+        "Times and rooms are in the UM timetable.\n:::\n\n")
 
 
 def write_schedule(module, data):

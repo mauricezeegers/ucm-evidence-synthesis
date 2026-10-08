@@ -1,11 +1,12 @@
 # SKI3011 schedule: the single source for the schedule, week pages, deadlines page and calendar.
-# NOTE: dates are placeholders from the 2025-2026 academic calendar.
+# Dates: UM academic calendar 2026-2027 (liberal arts colleges). Sessions on Wednesday unless a holiday forces another day.
+# Holidays in period 5: Easter Monday 29 Mar, bridging day 26 Apr, King's Day 27 Apr, Liberation Day Wed 5 May, Ascension 6 May, bridging day 7 May, Whit Monday 17 May.
 code: SKI3011
 title: "Evidence Synthesis 2: Statistics in Systematic Reviewing"
 period: 5
 weeks:
   - week: 1
-    date: 2026-04-01
+    date: 2027-03-31
     theme: "Your topic, your protocol and Covidence"
     lecture:
       - Course overview
@@ -23,7 +24,7 @@ weeks:
       - "Covidence: title/abstract screening"
       - "Install: R and RStudio"
   - week: 2
-    date: 2026-04-08
+    date: 2027-04-07
     theme: "R basics"
     lecture:
       - "R basics: R as a calculator, vectors, data frames, importing data, scripts, basic plots"
@@ -31,11 +32,11 @@ weeks:
       - "Covidence: full text screening and data extraction forms"
       - "R: run the lecture script on your own"
     assignments:
-      - {id: A1, title: "Protocol registered on protocols.io", due: "2026-04-14 11:59", grading: pass/fail}
+      - {id: A1, title: "Protocol registered on protocols.io", due: "2027-04-13 11:59", grading: pass/fail}
     homework:
       - "Qualitative data extraction: study characteristics and risk of bias (robvis) of all primary papers"
   - week: 3
-    date: 2026-04-15
+    date: 2027-04-14
     theme: "Meta-analysis in R I"
     lecture:
       - "Effect sizes with escalc(), rma(yi, vi), forest plots"
@@ -47,7 +48,7 @@ weeks:
     homework:
       - Quantitative data extraction of all primary papers
   - week: 4
-    date: 2026-04-22
+    date: 2027-04-21
     theme: "Meta-analysis in R II"
     lecture:
       - "Binary (RR, OR) and continuous (MD, SMD) outcomes"
@@ -55,9 +56,9 @@ weeks:
     tutorial:
       - "R: meta-analysis on your own data with binary or continuous outcomes"
     assignments:
-      - {id: A2, title: "1st draft: introduction, methods, results + R code + dataset", due: "2026-04-28 11:59", grading: pass/fail}
+      - {id: A2, title: "1st draft: introduction, methods, results + R code + dataset", due: "2027-04-23 23:59", grading: pass/fail}
   - week: 5
-    date: 2026-04-29
+    date: 2027-04-28
     theme: "Heterogeneity and publication bias"
     lecture:
       - "I², tau², prediction interval"
@@ -67,9 +68,9 @@ weeks:
     tutorial:
       - "R: heterogeneity and publication bias on your own data"
     assignments:
-      - {id: A3, title: "2nd draft + R code + dataset", due: "2026-05-05 11:59", grading: pass/fail}
+      - {id: A3, title: "2nd draft + R code + dataset", due: "2027-04-30 23:59", grading: pass/fail}
   - week: 6
-    date: 2026-05-06
+    date: 2027-05-04  # Tuesday: Wednesday 5 May is Liberation Day
     theme: "Subgroups, meta-regression and peer review"
     lecture:
       - Subgroup analysis and meta-regression
@@ -77,9 +78,9 @@ weeks:
     tutorial:
       - Peer review
     assignments:
-      - {id: A4, title: "Individual peer review", due: "2026-05-11 11:59", grading: "15%"}
+      - {id: A4, title: "Individual peer review", due: "2027-05-10 11:59", grading: "15%"}
   - week: 7
-    date: 2026-05-13
+    date: 2027-05-12
     theme: "From carbon to silicon"
     lecture:
       - "Claude Code demo"
@@ -90,11 +91,11 @@ weeks:
     homework:
       - "Optional: install Claude Code"
   - week: 8
-    date: 2026-05-18
+    date: 2027-05-17
     exam_week: true
     theme: "Exam week: final paper"
     assignments:
-      - {id: A5, title: "Final paper + R code + dataset", due: "2026-05-22 23:59", grading: "60%"}
+      - {id: A5, title: "Final paper + R code + dataset", due: "2027-05-21 23:59", grading: "60%"}
 assessment:
   - ["Quizzes 1-5 (paper, in the tutorial, interpreting R code and output)", "25%", "Best 4 of 5 count"]
   - ["A4 Individual peer review", "15%", "Individual"]

@@ -1,12 +1,12 @@
 # SKI3010 schedule: the single source for the schedule, week pages, deadlines page and calendar.
 # Edit here, then run `quarto preview` or `quarto render`. Dates: YYYY-MM-DD, deadlines: "YYYY-MM-DD HH:MM" (Maastricht time).
-# NOTE: dates are placeholders from the 2025-2026 academic calendar.
+# Dates: UM academic calendar 2026-2027 (liberal arts colleges). Sessions on Wednesday unless a holiday forces another day.
 code: SKI3010
 title: "Evidence Synthesis 1: Study Designs in Systematic Reviewing"
 period: 4
 weeks:
   - week: 1
-    date: 2026-01-28
+    date: 2027-01-27
     theme: "Systematic reviews and observational studies"
     lecture:
       - Course overview
@@ -24,7 +24,7 @@ weeks:
       - "Read: Chapter 11, Textbook of Epidemiology"
       - "Install: Zotero"
   - week: 2
-    date: 2026-02-04
+    date: 2027-02-03
     theme: "Measures of frequency and association"
     lecture:
       - "Data extraction: measures of frequency and association"
@@ -32,13 +32,15 @@ weeks:
     tutorial:
       - Study characteristics and risk of bias
     assignments:
-      - {id: A1a, title: "Study characteristics and risk of bias of all primary papers (spreadsheet)", due: "2026-02-10 11:59", grading: pass/fail}
-      - {id: A1b, title: "1st draft: outline, introduction, methods, results incl. robvis plot", due: "2026-02-10 11:59", grading: pass/fail}
+      - {id: A1a, title: "Study characteristics and risk of bias of all primary papers (spreadsheet)", due: "2027-02-16 11:59", grading: pass/fail}
+      - {id: A1b, title: "1st draft: outline, introduction, methods, results incl. robvis plot", due: "2027-02-16 11:59", grading: pass/fail}
     homework:
       - "Read: Chapter 4.3, Textbook of Epidemiology"
       - "Read: risk of bias tools (NOS) and the PRISMA 2020 statement"
+  - break: "Carnival: no education"
+    date: 2027-02-10
   - week: 3
-    date: 2026-02-11
+    date: 2027-02-17
     theme: "Meta-analysis by hand"
     lecture:
       - "Introduction: meta-analysis"
@@ -47,13 +49,11 @@ weeks:
     tutorial:
       - Quantitative data extraction
     assignments:
-      - {id: A2a, title: "Quantitative data extraction of all primary papers", due: "2026-02-24 11:59", grading: pass/fail}
-      - {id: A2b, title: "2nd draft: introduction, methods, results", due: "2026-02-24 11:59", grading: pass/fail}
+      - {id: A2a, title: "Quantitative data extraction of all primary papers", due: "2027-02-23 11:59", grading: pass/fail}
+      - {id: A2b, title: "2nd draft: introduction, methods, results", due: "2027-02-23 11:59", grading: pass/fail}
     homework: []
-  - break: "Carnival: no education"
-    date: 2026-02-18
   - week: 4
-    date: 2026-02-25
+    date: 2027-02-24
     theme: "Meta-analysis in JASP"
     lecture:
       - "Introduction: JASP"
@@ -61,11 +61,11 @@ weeks:
     tutorial:
       - Meta-analysis by hand
     assignments:
-      - {id: A3, title: "3rd draft: introduction, methods, results", due: "2026-03-03 11:59", grading: pass/fail}
+      - {id: A3, title: "3rd draft: introduction, methods, results", due: "2027-03-02 11:59", grading: pass/fail}
     homework:
       - "Install: JASP"
   - week: 5
-    date: 2026-03-04
+    date: 2027-03-03
     theme: "Writing up your review"
     lecture:
       - "Optional: Q&A"
@@ -73,12 +73,12 @@ weeks:
     tutorial:
       - Meta-analysis in JASP
     assignments:
-      - {id: A4a, title: "Meta-analysis in JASP", due: "2026-03-10 11:59", grading: pass/fail}
-      - {id: A4b, title: "4th draft: introduction, methods, results, discussion", due: "2026-03-10 11:59", grading: pass/fail}
+      - {id: A4a, title: "Meta-analysis in JASP", due: "2027-03-09 11:59", grading: pass/fail}
+      - {id: A4b, title: "4th draft: introduction, methods, results, discussion", due: "2027-03-09 11:59", grading: pass/fail}
     homework:
       - "Read: risk of bias tools for systematic reviews and the PRISMA 2020 checklist"
   - week: 6
-    date: 2026-03-11
+    date: 2027-03-10
     theme: "Peer review"
     lecture:
       - "Optional: Q&A"
@@ -86,15 +86,15 @@ weeks:
       - Peer review
       - "Course evaluation (written)"
     assignments:
-      - {id: A5, title: "Individual peer review", due: "2026-03-17 11:59", grading: "15%"}
+      - {id: A5, title: "Individual peer review", due: "2027-03-16 11:59", grading: "15%"}
     homework:
       - "Read: Chapters 3 and 4.3, Textbook of Epidemiology"
   - week: 7
-    date: 2026-03-16
+    date: 2027-03-15
     exam_week: true
     theme: "Exam week: final paper"
     assignments:
-      - {id: A6, title: "Final paper, incorporating the peer review feedback", due: "2026-03-20 23:59", grading: "65%"}
+      - {id: A6, title: "Final paper, incorporating the peer review feedback", due: "2027-03-19 23:59", grading: "65%"}
     homework:
       - "Install: R and RStudio (for SKI3011)"
       - "Start thinking about your own research topic and group for SKI3011"

@@ -1,34 +1,34 @@
 # PRO3017 schedule: the single source for the schedule, week pages, deadlines page and calendar.
-# NOTE: dates are placeholders from the 2025-2026 academic calendar.
+# Dates: UM academic calendar 2026-2027 (liberal arts colleges). Sessions on Wednesday unless a holiday forces another day.
 code: PRO3017
 title: "Evidence Synthesis 3: Systematic Review Research Project"
 period: 6
 weeks:
   - week: 1
-    date: 2026-05-27
+    date: 2027-05-26
     theme: "From draft to manuscript"
     lecture:
       - "Online webinar + Q&A: abstract, discussion, PRISMA 2020 checklist, AI-use paragraph"
     assignments:
-      - {id: A1, title: "Presentation slides", due: "2026-06-02 23:59", grading: "part of 20%"}
+      - {id: A1, title: "Presentation slides", due: "2027-06-01 23:59", grading: "part of 20%"}
     homework:
       - "Write the 4th draft: abstract, introduction, methods (incl. AI use), results, discussion, appendices"
   - week: 2
-    date: 2026-06-03
+    date: 2027-06-03  # seminar Thursday 3 and Friday 4 June
     theme: "Seminar"
     lecture:
-      - "Full-day seminar on campus (3 and 4 June)"
+      - "Full-day seminar on campus (Thursday 3 and Friday 4 June)"
     assignments:
-      - {id: A2, title: "Seminar presentation", due: "2026-06-03 09:00", grading: "part of 20%"}
+      - {id: A2, title: "Seminar presentation", due: "2027-06-03 09:00", grading: "part of 20%"}
     homework:
       - Process the feedback from the seminar
   - week: 3
-    date: 2026-06-10
+    date: 2027-06-09
     theme: "Final manuscript"
     lecture:
       - "Online webinar + Q&A"
     assignments:
-      - {id: A3, title: "Final manuscript + R code + dataset", due: "2026-06-12 23:59", grading: "80%"}
+      - {id: A3, title: "Final manuscript + R code + dataset", due: "2027-06-11 23:59", grading: "80%"}
 assessment:
   - ["A1 + A2 Presentation (slides and seminar)", "20%", "Group"]
   - ["A3 Final manuscript + R code + dataset", "80%", "Group of 1-3 students"]
