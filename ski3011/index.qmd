@@ -1,45 +1,27 @@
 ---
-title: "SKI3011"
-subtitle: "Evidence Synthesis 2: Statistics in Systematic Reviewing"
+title: "SKI3011: start here"
+subtitle: "Evidence Synthesis 2: Statistics in Systematic Reviewing · Period 5"
+toc: false
 ---
 
-::: {.callout-note}
-Draft for 2026-2027. Dates follow the 2025-2026 academic calendar and will be updated.
-:::
+In this module you choose your own topic and carry out a systematic review and meta-analysis in R, from protocol to draft paper. The first six weeks you write and read R code yourself. In week 7 we turn to Claude Code.
 
-* Period 5, 2.5 ECTS, skills training
-* Prerequisite: Evidence Synthesis 1 (SKI3010); an argued exception is possible. Recommended: Research Methods II (SKI1005), Presentation Skills (SKI2007), and an idea of the research field you are most interested in.
-* Instructional format: optional lectures, tutorials, teamwork in groups of 1 to 3 students.
-* Examination: 5 weekly paper quizzes on R code (25%, best 4 of 5 count), individual peer review (15%), final paper with R code and dataset (60%); 3 progress assignments (pass/fail).
+## How a week works
 
-## This module
+1. **Learn the R code.** Work through the lecture script, the concept list and the practice questions, or come to the lecture. Slides and scripts are online before the lecture.
+2. **Quiz.** At the start of the next tutorial you take a short paper quiz: you read R code and output from the previous lecture and explain what it does and what it means.
+3. **Apply it to your own data** in the tutorial, with the tutor available for questions.
+4. **Hand in** before the deadline via the [submission form](../submit.qmd).
 
-In SKI3011 you choose your own research topic and carry out a systematic review and meta-analysis from start to finish. You write a protocol and register it on protocols.io, manage screening and data extraction in Covidence, and learn to run meta-analyses in R: effect sizes for binary and continuous outcomes, proportions and correlations, forest plots, heterogeneity, publication bias, subgroup analysis and meta-regression. The pace is higher than in SKI3010, and you get more freedom.
+## Your weeks
 
-The first six weeks are carbon-based. You write your own R code, and each week a short paper quiz checks whether you can read and interpret the code and output from the previous lecture. In week 7 the module turns silicon-based with a demonstration of Claude Code. From then on you may also let AI do part of the work in your own project, but you do not have to. You finish with a draft paper (introduction, methods, results) plus R code and dataset, which you complete in PRO3017.
+The current week is highlighted.
 
-## Schedule
+{{< include _weeks.qmd >}}
 
-::: {.column-page}
-| Week | Dates | Lecture | Tutorial | Assignments | Homework |
-|---|---|---|---|---|---|
-| 1 | 1 Apr | Course overview. Choosing your topic and research question. Protocols on protocols.io. Introduction: Covidence | Search & find your topic. Import in Zotero & Covidence. PRISMA flow chart (Covidence). Choose your partner (groups of 1-3) | (none) | Create: protocols.io account, Covidence project. Watch: Covidence webinar. Covidence: title/abstract screening. Install: R and RStudio. Study: concept list week 1 |
-| 2 | 8 Apr | R basics: R as a calculator, vectors, data frames, importing data, scripts, basic plots | Covidence: full text screening, data extraction forms. R: run the lecture script on your own | **A1**: protocol registered on protocols.io (DL before next tutorial) | Qualitative data extraction: SC and RoB (robvis) of all primary papers. Study: concept list week 2 |
-| 3 | 15 Apr | Meta-analysis in R I: effect sizes with escalc(), rma(yi, vi), forest plots. Proportions and correlations | **Quiz 1**: interpreting R code and output from lecture 2 (R basics). Covidence: quantitative extraction, export to csv. R: first meta-analysis on your own data | (none) | Quantitative data extraction of all primary papers. Study: concept list week 3 |
-| 4 | 22 Apr | Meta-analysis in R II: binary (RR, OR) and continuous (MD, SMD) outcomes | **Quiz 2**: interpreting R code and output from lecture 3 (meta-analysis in R I). R: meta-analysis on your own data with binary or continuous outcomes | **A2**: 1st draft: introduction, methods, results + R code + dataset (DL before next tutorial) | Study: concept list week 4 |
-| 5 | 29 Apr | Heterogeneity and publication bias: I², tau², prediction interval, funnel plot, Egger test, trim-and-fill, leave-one-out, cumulative meta-analysis | **Quiz 3**: interpreting R code and output from lecture 4 (meta-analysis in R II). R: heterogeneity and publication bias on your own data | **A3**: 2nd draft + R code + dataset (DL 5 May 11:59) | Study: concept list week 5 |
-| 6 | 6 May | Subgroup analysis and meta-regression (mods =) | **Quiz 4**: interpreting R code and output from lecture 5 (heterogeneity and publication bias). Peer review | **A4**: individual peer review (DL 11 May 11:59) | Study: concept list week 6 |
-| 7 | 13 May | From carbon to silicon: Claude Code demo | **Quiz 5**: interpreting R code and output from lecture 6 (subgroup analysis and meta-regression). AI on own project. Evaluation: oral | (none) | Optional: install Claude Code |
-| 8 | 18-22 May | *Exam week* | | **A5**: final draft + R code + dataset (DL 22 May 23:59) | |
+## Read next
 
-: {tbl-colwidths="[5,9,22,22,21,21]"}
-:::
-
-## Assessment
-
-| Component | Weight | Notes |
-|---|---|---|
-| Quizzes 1-5 (paper, in tutorial, interpreting R code and output from the previous lecture) | 25% | Best 4 of 5 count |
-| A4 Individual peer review | 15% | Individual |
-| A5 Final paper + R code + dataset | 60% | Group (1-3 students) |
-| A1-A3 progress assignments | 0% | Pass/fail |
+* [Syllabus](syllabus.qmd): what you learn, how you are assessed, the rules
+* [Schedule](schedule.qmd): the full timetable
+* [Deadlines](../deadlines.qmd): all deadlines, also as a calendar subscription
+* [Tools](../tools.qmd): what to install and when

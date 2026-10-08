@@ -1,0 +1,32 @@
+---
+title: "PRO3017 syllabus"
+subtitle: "Evidence Synthesis 3: Systematic Review Research Project"
+---
+
+* Period 6 · 5 ECTS · project
+* Prerequisite: Evidence Synthesis 2 (SKI3011)
+* Format: online webinars with Q&A, one full-day seminar on campus
+
+## This module
+
+PRO3017 is the final stretch. You turn your SKI3011 draft into a complete manuscript, with abstract, discussion, appendices and a paragraph on your use of AI, reported according to PRISMA 2020. In the second week you present your review at a full-day seminar on campus and receive feedback from fellow students and the tutor. All other meetings are online webinars with time for your questions. At the end of the period you submit the final manuscript together with your R code and dataset.
+
+## Learning outcomes
+
+After this module you can:
+
+1. complete a systematic review and meta-analysis manuscript that follows PRISMA 2020;
+2. present and defend your review in front of an academic audience;
+3. report transparently on your use of AI tools.
+
+## Assessment
+
+{{< include _assessment.qmd >}}
+
+The manuscript is graded with the [rubric for the final paper](../rubrics.qmd).
+
+## Rules
+
+* **Deadlines.** Hand in via the [submission form](../submit.qmd), always with R script and dataset.
+* **AI** is allowed; see [AI use](../ai.qmd).
+* **Announcements** are sent through Canvas and reach you by e-mail.

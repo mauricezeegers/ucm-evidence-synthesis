@@ -1,0 +1,22 @@
+---
+title: "Tools"
+subtitle: "What to install, and when you need it"
+---
+
+| Tool | What for | Needed from | Link |
+|---|---|---|---|
+| Zotero | Reference management | SKI3010 week 1 | [zotero.org](https://www.zotero.org) |
+| JASP | Meta-analysis with a point-and-click interface | SKI3010 week 4 | [jasp-stats.org](https://jasp-stats.org) |
+| R | Statistical computing | SKI3011 week 1 | [cran.r-project.org](https://cran.r-project.org) |
+| RStudio | Working environment for R (install R first) | SKI3011 week 1 | [posit.co](https://posit.co/download/rstudio-desktop/) |
+| Covidence | Screening and data extraction for systematic reviews | SKI3011 week 1 | [covidence.org](https://www.covidence.org) |
+| protocols.io | Registering your review protocol | SKI3011 week 1 | [protocols.io](https://www.protocols.io) |
+| Claude Code | AI coding assistant (optional) | SKI3011 week 7 | [claude.com](https://www.claude.com/product/claude-code) |
+
+## R packages
+
+In SKI3011 we use the packages `metafor` and `meta`. Install them once in RStudio:
+
+```r
+install.packages(c("metafor", "meta"))
+```

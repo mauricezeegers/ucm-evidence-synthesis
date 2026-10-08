@@ -1,0 +1,44 @@
+## Concepts and practice
+
+These concepts are covered in Quiz 1 (next week's tutorial). Textbook: Chapters 4 and 11.
+
+### Concept list
+
+| Concept | In one sentence |
+|---|---|
+| Narrative review | A summary of the literature without a predefined, reproducible method for finding and selecting studies. |
+| Systematic review | A review that answers a focused question with a predefined, reproducible method to find, select, appraise and synthesise all relevant studies. |
+| Meta-analysis | The statistical pooling of the results of the studies included in a systematic review into one summary estimate. |
+| PECO / PICO | The elements of a focused review question: Population, Exposure (or Intervention), Comparison, Outcome. |
+| Eligibility criteria | The predefined inclusion and exclusion criteria a study must meet to be included in the review. |
+| Search strategy | The combination of databases, search terms and Boolean operators used to find all potentially relevant studies. |
+| Screening | Selecting studies in two steps: first on title and abstract, then on full text. |
+| PRISMA 2020 | The reporting guideline for systematic reviews, including the flow diagram of identified, screened and included studies. |
+| Cohort study | An observational study that follows exposed and unexposed people over time and compares how often the outcome occurs. |
+| Case-control study | An observational study that compares the past exposure of people with the outcome (cases) to people without it (controls). |
+| Cross-sectional study | An observational study that measures exposure and outcome at the same moment. |
+| Observational versus experimental | In an observational study the researcher does not assign the exposure; in an experiment (such as a randomised controlled trial) the researcher does. |
+| Hierarchy of evidence | The ranking of study designs by how well they support causal conclusions. |
+
+### Practice questions
+
+**1.** A researcher selects 200 children with autism and 400 children without autism and asks their parents which vaccines the child received. Which study design is this, and why?
+
+::: {.callout-tip collapse="true"}
+## Answer
+A case-control study: participants are selected on the outcome (autism or not), and past exposure (vaccination) is then compared between cases and controls.
+:::
+
+**2.** Formulate the review question of this module in PECO format.
+
+::: {.callout-tip collapse="true"}
+## Answer
+P: children; E: thimerosal-containing vaccines; C: thimerosal-free vaccines (or lower exposure); O: autism spectrum disorder.
+:::
+
+**3.** Why is a meta-analysis not always possible, even after a good systematic review?
+
+::: {.callout-tip collapse="true"}
+## Answer
+Because the included studies may be too different (in population, exposure, outcome or design) or may not report the data needed to pool their results. The review then stays a systematic review with a narrative synthesis.
+:::

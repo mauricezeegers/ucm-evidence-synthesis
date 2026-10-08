@@ -1,0 +1,38 @@
+---
+title: "SKI3010 syllabus"
+subtitle: "Evidence Synthesis 1: Study Designs in Systematic Reviewing"
+---
+
+* Period 4 · 2.5 ECTS · skills training
+* Prerequisite: Statistics I (SSC2061); an argued exception is possible. Recommended: Research Methods I (SKI1004), Research Methods II (SKI1005), Presentation Skills (SKI2007).
+* Textbook: *Textbook of Epidemiology*, 2nd edition (Wiley), available via the library (KeyLinks).
+
+## This module
+
+SKI3010 lays the foundation. You learn the basic concepts of epidemiology and statistics that every systematic review relies on: study designs, measures of frequency and association, bias and risk of bias, and the logic of meta-analysis. You apply them right away. All groups work on the same review question: does exposure to thimerosal-containing vaccines increase the risk of autism spectrum disorder in children? Starting from the primary studies, you extract study characteristics, assess risk of bias with the Newcastle-Ottawa Scale, extract quantitative data, perform a meta-analysis first by hand and then in JASP, and write a paper that follows PRISMA 2020. At the end you give individual written feedback on the paper of another group.
+
+## Learning outcomes
+
+After this module you can:
+
+1. explain the basic concepts of systematic reviews, observational study designs and measures of frequency and association;
+2. extract study characteristics and assess the risk of bias of observational studies with the Newcastle-Ottawa Scale;
+3. extract quantitative data and prepare it for meta-analysis;
+4. perform and interpret a meta-analysis by hand and in JASP;
+5. write a systematic review that follows PRISMA 2020;
+6. give constructive feedback on a systematic review written by others.
+
+## Assessment
+
+{{< include _assessment.qmd >}}
+
+The final paper and the peer review are graded with the [rubrics](../rubrics.qmd).
+
+## Rules
+
+* **Groups.** You work in a group of 1 to 3 students and stay in that group for the whole module. Every member is responsible for the whole paper. The peer review is individual.
+* **Quizzes.** Paper quiz at the start of the tutorial, no devices. The best 3 of 4 quizzes count. A missed quiz scores 0 and has no separate resit. With documented illness you can take the quiz in the next tutorial.
+* **Deadlines.** Hand in via the [submission form](../submit.qmd). The progress assignments A1 to A4 are pass/fail; you get feedback in the next tutorial.
+* **Lectures** are optional. **Tutorials** are where you start your assignment with help from the tutor.
+* **AI** is allowed as a tutor; see [AI use](../ai.qmd). Every paper contains a short AI-use paragraph in the methods.
+* **Announcements** are sent through Canvas and reach you by e-mail.

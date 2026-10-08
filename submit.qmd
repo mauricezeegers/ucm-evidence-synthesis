@@ -1,0 +1,19 @@
+---
+title: "How to submit"
+---
+
+You hand in every assignment through the submission form of your module. You need to be signed in with a Google account to upload files.
+
+| Module | Submission form |
+|---|---|
+| SKI3010 | *link follows* |
+| SKI3011 | *link follows* |
+| PRO3017 | *link follows* |
+
+## Checklist
+
+* **One submission per group** for group assignments; the peer review is individual.
+* **File names:** `MODULE_Assignment_Surnames`, for example `SKI3010_A1b_Jansen_Peeters.docx`.
+* **Formats:** text as .docx or .pdf, R code as .R, data as .csv.
+* **SKI3011 and PRO3017:** always include your R script and your dataset, so that your results can be reproduced.
+* **Deadlines** are in Maastricht time. See [Deadlines](deadlines.qmd) or subscribe to the calendar.

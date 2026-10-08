@@ -10,3 +10,23 @@ $font-size-root: 17px;
 table { font-size: 0.9rem; }
 td, th { vertical-align: top; }
 .quiz { font-weight: 600; color: $primary; }
+
+// Schedule and deadlines tables
+table.schedule th:nth-child(1), table.schedule td:nth-child(1) { width: 4%; }
+table.schedule th:nth-child(2), table.schedule td:nth-child(2) { width: 8%; white-space: nowrap; }
+table.schedule tr.break td { background: #f3f3f3; }
+table.schedule tr.current td, .week-card.current { background: #fdeee6; }
+table.schedule .due { color: #6c757d; white-space: nowrap; }
+table.deadlines tr.past td { color: #adb5bd; }
+table.deadlines tr.quiz td { background: #fdf6f2; }
+
+// Week cards on the "start here" pages
+.week-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.week-card { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.8rem 1rem; border: 1px solid #dee2e6; border-radius: 6px; text-decoration: none; color: inherit; }
+a.week-card:hover { border-color: $primary; }
+.week-card .when { font-size: 0.8rem; color: #6c757d; }
+.week-card .what { font-weight: 600; }
+.week-card .due { font-size: 0.8rem; color: $primary; }
+.week-card.current::before { content: "This week"; font-size: 0.75rem; font-weight: 700; color: $primary; text-transform: uppercase; }
+.week-card.break { background: #f3f3f3; }
+table.deadlines td:nth-child(-n+3) { white-space: nowrap; }

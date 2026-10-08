@@ -1,6 +1,13 @@
 project:
   type: website
   output-dir: _site
+  # Generates the schedules, week pages, deadlines page and calendar.ics from data/*.yml
+  pre-render: scripts/build.py
+  # Files that are not linked from a page but must be published anyway
+  resources:
+    - calendar.ics
+    - materials/
+    - assets/
 
 website:
   title: "Evidence Synthesis"
@@ -18,12 +25,65 @@ website:
         text: "SKI3011"
       - href: pro3017/index.qmd
         text: "PRO3017"
-      - href: ai.qmd
-        text: "AI use"
+      - href: deadlines.qmd
+        text: "Deadlines"
+      - text: "More"
+        menu:
+          - href: submit.qmd
+          - href: tools.qmd
+          - href: rubrics.qmd
+          - href: ai.qmd
     right:
       - icon: github
         href: https://github.com/mauricezeegers/ucm-evidence-synthesis
         aria-label: GitHub
+  # One sidebar per module; a page shows the sidebar it is listed in
+  sidebar:
+    - id: ski3010
+      title: "SKI3010"
+      contents:
+        - href: ski3010/index.qmd
+          text: Start here
+        - ski3010/syllabus.qmd
+        - ski3010/schedule.qmd
+        - section: "Weeks"
+          contents:
+            - ski3010/week-1.qmd
+            - ski3010/week-2.qmd
+            - ski3010/week-3.qmd
+            - ski3010/week-4.qmd
+            - ski3010/week-5.qmd
+            - ski3010/week-6.qmd
+            - ski3010/week-7.qmd
+    - id: ski3011
+      title: "SKI3011"
+      contents:
+        - href: ski3011/index.qmd
+          text: Start here
+        - ski3011/syllabus.qmd
+        - ski3011/schedule.qmd
+        - section: "Weeks"
+          contents:
+            - ski3011/week-1.qmd
+            - ski3011/week-2.qmd
+            - ski3011/week-3.qmd
+            - ski3011/week-4.qmd
+            - ski3011/week-5.qmd
+            - ski3011/week-6.qmd
+            - ski3011/week-7.qmd
+            - ski3011/week-8.qmd
+    - id: pro3017
+      title: "PRO3017"
+      contents:
+        - href: pro3017/index.qmd
+          text: Start here
+        - pro3017/syllabus.qmd
+        - pro3017/schedule.qmd
+        - section: "Weeks"
+          contents:
+            - pro3017/week-1.qmd
+            - pro3017/week-2.qmd
+            - pro3017/week-3.qmd
   page-footer:
     left: "University College Maastricht"
     right: "Written and researched with Claude Code support, content verified by the author."
@@ -35,3 +95,6 @@ format:
     toc: true
     toc-title: "On this page"
     lang: en
+    # Highlights the current week and greys out past deadlines
+    include-after-body:
+      text: '<script src="/assets/thisweek.js"></script>'

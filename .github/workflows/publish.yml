@@ -21,6 +21,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: quarto-dev/quarto-actions/setup@v2
+      # scripts/build.py (pre-render) reads the schedule data with PyYAML
+      - run: pip install pyyaml
+      # Generate the pages once before rendering: Quarto resolves includes before its own pre-render step
+      - run: python scripts/build.py
       - uses: quarto-dev/quarto-actions/render@v2
       - uses: actions/upload-pages-artifact@v3
         with:

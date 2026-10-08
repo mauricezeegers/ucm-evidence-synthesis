@@ -1,0 +1,26 @@
+---
+title: "Rubrics"
+subtitle: "How the final paper and the peer review are graded"
+---
+
+::: {.callout-note}
+Draft rubrics for 2026-2027.
+:::
+
+## Final paper (SKI3010, SKI3011, PRO3017)
+
+| Criterion | What we look for |
+|---|---|
+| Good research conduct | The review question, eligibility criteria, search, selection, data extraction and risk-of-bias assessment are done systematically and reported transparently (PRISMA 2020). Choices are justified. AI use is reported. |
+| Use of data | Effect measures are extracted and calculated correctly, the meta-analysis model fits the data, heterogeneity and (where relevant) publication bias are addressed, and results are interpreted in light of the risk of bias. For SKI3011 and PRO3017: R code and dataset reproduce the results. |
+| Readability | Clear structure (introduction, methods, results, discussion), precise academic English, a logical line of argument from question to conclusion. |
+| Presentation | Tables, figures (PRISMA flow chart, risk-of-bias plot, forest plot) and references are complete, correctly labelled and consistent with the text. |
+
+## Peer review (individual)
+
+| Criterion | What we look for |
+|---|---|
+| Completeness | All sections of the paper are covered, including methods and results, not only language. |
+| Accuracy | Methodological comments are correct and use the concepts of the course. |
+| Specificity | Comments point to concrete passages, tables or figures. |
+| Constructiveness | Each main comment comes with a suggestion for improvement; the tone is respectful. |

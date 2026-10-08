@@ -38,6 +38,8 @@ Finish your manuscript and present it at the seminar on campus.
 
 :::
 
+Every module has a **Start here** page with your weeks, a syllabus and a schedule. All quizzes and deadlines of the semester are on one page: [Deadlines](deadlines.qmd), which you can also add to your own calendar.
+
 ## The semester
 
 About three million scientific articles are published every year, and even a narrow research field can produce tens of thousands of papers annually. During the first wave of COVID-19 alone, more than 23,500 articles appeared on the topic. Researchers, policy makers and research-based professionals need to bring these results together: to support evidence-based decisions and regulatory approval, and to show where further research is needed. Systematic reviews and meta-analyses do this with dedicated study designs, software and statistical methods, and they are used in every research domain.

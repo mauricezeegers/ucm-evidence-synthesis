@@ -1,36 +1,17 @@
 ---
-title: "PRO3017"
-subtitle: "Evidence Synthesis 3: Systematic Review Research Project"
+title: "PRO3017: start here"
+subtitle: "Evidence Synthesis 3: Systematic Review Research Project · Period 6"
+toc: false
 ---
 
-::: {.callout-note}
-Draft for 2026-2027. Dates follow the 2025-2026 academic calendar and will be updated.
-:::
+The final stretch: you turn your SKI3011 draft into a complete manuscript and present it at the seminar on campus. All other meetings are online.
 
-* Period 6, 5 ECTS, project
-* Prerequisite: Evidence Synthesis 2 (SKI3011).
-* Instructional format: online webinars with Q&A, one full-day seminar on campus.
-* Examination: presentation (20%), final manuscript with R code and dataset (80%).
+## Your weeks
 
-## This module
+{{< include _weeks.qmd >}}
 
-PRO3017 is the final stretch. You turn your SKI3011 draft into a complete manuscript, with abstract, discussion, appendices and a paragraph on your use of AI, reported according to PRISMA 2020. In the second week you present your review at a full-day seminar on campus and receive feedback from fellow students and the tutor. All other meetings are online webinars with time for your questions. At the end of the period you submit the final manuscript together with your R code and dataset.
+## Read next
 
-## Schedule
-
-::: {.column-page}
-| Week | Dates | Lecture | Assignments | Homework |
-|---|---|---|---|---|
-| 1 | 27 May | Online webinar + QA: from draft to manuscript (abstract, discussion, PRISMA 2020 checklist, AI-use paragraph) | **A1**: presentation slides (DL 2 Jun 23:59) | Write 4th draft: abstract, introduction, methods (incl. AI use), results, discussion, appendices |
-| 2 | 3+4 Jun | **Seminar on campus** (full day) | **A2**: seminar presentation | Process feedback from the seminar |
-| 3 | 10 Jun | Online webinar + QA | **A3**: final manuscript + R code + dataset (DL 12 Jun 23:59) | |
-
-: {tbl-colwidths="[6,10,30,27,27]"}
-:::
-
-## Assessment
-
-| Component | Weight | Notes |
-|---|---|---|
-| A1 + A2 Presentation (slides + seminar) | 20% | Group |
-| A3 Final manuscript + R code + dataset | 80% | Group (1-3 students) |
+* [Syllabus](syllabus.qmd)
+* [Schedule](schedule.qmd)
+* [Deadlines](../deadlines.qmd)

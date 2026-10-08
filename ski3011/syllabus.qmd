@@ -1,0 +1,39 @@
+---
+title: "SKI3011 syllabus"
+subtitle: "Evidence Synthesis 2: Statistics in Systematic Reviewing"
+---
+
+* Period 5 · 2.5 ECTS · skills training
+* Prerequisite: Evidence Synthesis 1 (SKI3010); an argued exception is possible. Recommended: Research Methods II (SKI1005), Presentation Skills (SKI2007), and an idea of the research field you are most interested in.
+
+## This module
+
+In SKI3011 you choose your own research topic and carry out a systematic review and meta-analysis from start to finish. You write a protocol and register it on protocols.io, manage screening and data extraction in Covidence, and learn to run meta-analyses in R: effect sizes for binary and continuous outcomes, proportions and correlations, forest plots, heterogeneity, publication bias, subgroup analysis and meta-regression. The pace is higher than in SKI3010, and you get more freedom.
+
+The first six weeks are carbon-based. You write your own R code, and each week a short paper quiz checks whether you can read and interpret the code and output from the previous lecture. In week 7 the module turns silicon-based with a demonstration of Claude Code. From then on you may also let AI do part of the work in your own project, but you do not have to. You finish with a draft paper (introduction, methods, results) plus R code and dataset, which you complete in PRO3017.
+
+## Learning outcomes
+
+After this module you can:
+
+1. formulate a review question and register a review protocol;
+2. manage screening and data extraction in Covidence;
+3. read, write and interpret R code for meta-analysis of binary, continuous, proportion and correlation data;
+4. assess heterogeneity and publication bias, and explore heterogeneity with subgroup analysis and meta-regression;
+5. write a draft systematic review with reproducible R code and dataset;
+6. give constructive feedback on a review and its code written by others;
+7. explain how an AI tool such as Claude Code can support a meta-analysis, and check its output.
+
+## Assessment
+
+{{< include _assessment.qmd >}}
+
+The final paper and the peer review are graded with the [rubrics](../rubrics.qmd).
+
+## Rules
+
+* **Groups.** You work in a group of 1 to 3 students on a topic of your own choice. Every member is responsible for the whole paper and code. The peer review is individual.
+* **Quizzes.** Paper quiz at the start of the tutorial, no devices. The best 4 of 5 quizzes count. A missed quiz scores 0 and has no separate resit. With documented illness you can take the quiz in the next tutorial.
+* **Deadlines.** Hand in via the [submission form](../submit.qmd). Always include your R script and your dataset (csv), so that your results can be reproduced.
+* **AI** is allowed as a tutor from week 1 and as a co-worker from week 7; see [AI use](../ai.qmd). Every paper contains a short AI-use paragraph in the methods.
+* **Announcements** are sent through Canvas and reach you by e-mail.

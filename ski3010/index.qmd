@@ -1,45 +1,28 @@
 ---
-title: "SKI3010"
-subtitle: "Evidence Synthesis 1: Study Designs in Systematic Reviewing"
+title: "SKI3010: start here"
+subtitle: "Evidence Synthesis 1: Study Designs in Systematic Reviewing · Period 4"
+toc: false
 ---
 
-::: {.callout-note}
-Draft for 2026-2027. Dates follow the 2025-2026 academic calendar and will be updated.
-:::
+In this module you write your first systematic review and meta-analysis, together with one or two fellow students. All groups work on the same question: **does exposure to thimerosal-containing vaccines increase the risk of autism spectrum disorder in children?**
 
-* Period 4, 2.5 ECTS, skills training
-* Prerequisite: Statistics I (SSC2061); an argued exception is possible. Recommended: Research Methods I (SKI1004), Research Methods II (SKI1005), Presentation Skills (SKI2007).
-* Instructional format: optional lectures, tutorials, teamwork in groups of 1 to 3 students.
-* Examination: 4 weekly paper quizzes (20%, best 3 of 4 count), individual peer review (15%), final paper (65%); 4 progress assignments (pass/fail).
+## How a week works
 
-## This module
+1. **Learn the concepts.** Use the concept list of the week page, the textbook, an AI tutor in learning mode, or come to the lecture. The slides are online before the lecture.
+2. **Practise.** Every week page has practice questions with answers.
+3. **Quiz.** At the start of the next tutorial you take a short paper quiz on those concepts.
+4. **Work on your review.** The rest of the tutorial is for the weekly assignment, with the tutor available for questions.
+5. **Hand in** before the deadline via the [submission form](../submit.qmd).
 
-SKI3010 lays the foundation. You learn the basic concepts of epidemiology and statistics that every systematic review relies on: study designs, measures of frequency and association, bias and risk of bias, and the logic of meta-analysis. You apply them right away. All groups work on the same review question: does exposure to thimerosal-containing vaccines increase the risk of autism spectrum disorder in children? Starting from the primary studies, you extract study characteristics, assess risk of bias with the Newcastle-Ottawa Scale, extract quantitative data, perform a meta-analysis first by hand and then in JASP, and write a paper that follows PRISMA 2020. At the end you give individual written feedback on the paper of another group.
+## Your weeks
 
-Each tutorial starts with a short paper quiz on the topic of the previous week. The rest of the tutorial is for your weekly assignment, with the tutor available for questions. The textbook for this module (and the semester) is the Textbook of Epidemiology (2nd edition).
+The current week is highlighted.
 
-## Schedule
+{{< include _weeks.qmd >}}
 
-::: {.column-page}
-| Week | Dates | Lecture | Tutorial | Assignments | Homework |
-|---|---|---|---|---|---|
-| 1 | 26-30 Jan | Course overview. Systematic literature reviews. Observational study designs. Risk of bias + NOS scale. Data extraction: study characteristics. Example primary paper | Introduction: systematic review. Introduction: research topic. Search & find relevant papers (different databases). Choose your partner | (none) | Read: 6 primary studies, make PRISMA flow chart. Read: Ch. 11 Textbook. Install: Zotero. Study: concept list week 1 |
-| 2 | 2-6 Feb | Data extraction: measures of frequency and association | **Quiz 1**: systematic literature reviews and observational study designs. Study characteristics & risk of bias | **A1a**: SC and RoB of all primary papers as spreadsheet. **A1b**: 1st draft: outline, introduction, methods, results incl. robvis (DL before next tutorial) | Read: Ch. 4.3 Textbook, RoB tools (NOS), PRISMA 2020. Study: concept list week 2 |
-| 3 | 9-13 Feb | Introduction: meta-analyses. Meta-analyses by hand | **Quiz 2**: measures of frequency and association. Quantitative data extraction | **A2a**: quantitative data extraction of all primary papers. **A2b**: 2nd draft (DL before next tutorial) | Study: concept list week 3 |
-| | 16-20 Feb | *Carnival, no education* | | | |
-| 4 | 23-27 Feb | Introduction JASP | **Quiz 3**: meta-analysis (introduction, by hand). Meta-analysis by hand | **A3**: 3rd draft: introduction, methods, results (DL before next tutorial) | Install: JASP. Study: concept list week 4 |
-| 5 | 2-6 Mar | Optional: QA | **Quiz 4**: meta-analysis in JASP. Meta-analysis in JASP | **A4a**: meta-analysis in JASP. **A4b**: 4th draft incl. discussion (DL 10 Mar 11:59) | Read: RoB tools (SLR), PRISMA 2020 |
-| 6 | 9-13 Mar | Optional: QA | Peer review. Evaluation: written | **A5**: individual peer review (DL 17 Mar 11:59) | Read: Ch. 3 & 4.3 Textbook |
-| 7 | 16-20 Mar | *Exam week* | | **A6**: final draft, incorporate peer review feedback (DL 20 Mar 23:59) | Install: R and RStudio (for SKI3011). Start thinking about your own research topic and group |
+## Read next
 
-: {tbl-colwidths="[5,9,22,22,21,21]"}
-:::
-
-## Assessment
-
-| Component | Weight | Notes |
-|---|---|---|
-| Quizzes 1-4 (paper, in tutorial) | 20% | Best 3 of 4 count |
-| A5 Individual peer review | 15% | Individual |
-| A6 Final paper | 65% | Group (1-3 students) |
-| A1-A4 progress assignments | 0% | Pass/fail |
+* [Syllabus](syllabus.qmd): what you learn, how you are assessed, the rules
+* [Schedule](schedule.qmd): the full timetable
+* [Deadlines](../deadlines.qmd): all deadlines, also as a calendar subscription
+* [Tools](../tools.qmd): what to install and when
