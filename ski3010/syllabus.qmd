@@ -5,7 +5,7 @@ subtitle: "Evidence Synthesis 1: Study Designs in Systematic Reviewing"
 
 * Period 4 · 2.5 ECTS · skills training
 * Prerequisite: Statistics I (SSC2061); an argued exception is possible. Recommended: Research Methods I (SKI1004), Research Methods II (SKI1005), Presentation Skills (SKI2007).
-* Textbook: *Textbook of Epidemiology*, 2nd edition (Wiley), available via the library (KeyLinks).
+* Textbook: [*Textbook of Epidemiology*, 2nd edition (Wiley)](https://www.wiley.com/en-us/Textbook+of+Epidemiology%2C+2nd+Edition-p-9781119776024), available via the library (KeyLinks).
 
 ## This module
 
@@ -33,6 +33,6 @@ The final paper and the peer review are graded with the [rubrics](../rubrics.qmd
 * **Groups.** You work in a group of 1 to 3 students and stay in that group for the whole module. Every member is responsible for the whole paper. The peer review is individual.
 * **Quizzes.** Paper quiz at the start of the tutorial, no devices. The best 3 of 4 quizzes count. A missed quiz scores 0 and has no separate resit. With documented illness you can take the quiz in the next tutorial.
 * **Deadlines.** Hand in via the [submission form](../submit.qmd). The progress assignments A1 to A4 are pass/fail; you get feedback in the next tutorial.
-* **Lectures** are optional. **Tutorials** are where you start your assignment with help from the tutor.
+* **Lectures** are optional, their content is not: it is not repeated in the tutorials and is tested in the quiz of the following week. **Tutorials** are where you start your assignment with help from the tutor.
 * **AI** is allowed as a tutor; see [AI use](../ai.qmd). Every paper contains a short AI-use paragraph in the methods.
 * **Announcements** are sent through Canvas and reach you by e-mail.

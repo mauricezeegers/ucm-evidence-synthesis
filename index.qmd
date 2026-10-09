@@ -1,6 +1,6 @@
 ---
 title: "Evidence Synthesis"
-subtitle: "Systematic reviews and meta-analysis at University College Maastricht, spring semester 2026-2027"
+subtitle: "Systematic reviews and meta-analysis at University College Maastricht, January to June 2027"
 toc: false
 ---
 
@@ -48,17 +48,21 @@ The semester consists of two skills trainings (periods 4 and 5) and a project (p
 
 ### Carbon before silicon
 
+Your brain is carbon-based; computer chips are made of silicon. "Carbon" therefore stands for human thinking and "silicon" for AI. The semester follows that order: first you master the methods with your own head, then you learn to work with AI.
+
 AI tools can now search the literature, screen abstracts, extract data and write R code. They are only useful in the hands of someone who can judge their output. That is why you first learn the concepts yourself: in periods 4 and 5, short paper quizzes in the tutorials check whether you understand the epidemiology, the statistics and the R code. From week 7 of SKI3011 the semester turns silicon-based: you will see how Claude Code can carry out a meta-analysis and how to put it to work on your own project. Read the [AI use](ai.qmd) page for the rules.
 
 ### Lectures are optional
 
 Every week has a concept list that matches the quiz of the following week, together with practice questions. You decide how you learn: with the concept list and the textbook, with an AI tutor, by attending the lecture, or a combination. The lectures help you separate the main points from the details and show how deep you need to go.
 
+Attending is optional, the content is not. The tutorials do not repeat the lecture material: they are for working on your assignments. What the lecture covers is tested in the quiz of the following week, whether you came to the lecture or studied it on your own.
+
 ### Good to know
 
 The semester teaches you to read and write academic papers, which makes it good preparation for your capstone and for later academic work. One of our students won the 2024 Dies Natalis Prize for the best bachelor thesis/honours programme. This is not the easiest semester you can take, but it is very doable if you keep up every week.
 
-**Textbook:** *Textbook of Epidemiology*, 2nd edition (Wiley).
+**Textbook:** [*Textbook of Epidemiology*, 2nd edition (Wiley)](https://www.wiley.com/en-us/Textbook+of+Epidemiology%2C+2nd+Edition-p-9781119776024).
 
 ## What students say
 
