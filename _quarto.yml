@@ -13,6 +13,11 @@ website:
   title: "Evidence Synthesis"
   site-url: https://ucm.meta-research.nl
   description: "Course website for the Evidence Synthesis semester at University College Maastricht"
+  # Meta tags for link previews and search engines; the page text comes from each page's description
+  open-graph: true
+  twitter-card: true
+  # Writes llms.txt plus a Markdown copy of every page, so AI agents can read the site easily
+  llms-txt: true
   search: true
   page-navigation: true
   navbar:

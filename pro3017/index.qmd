@@ -1,6 +1,7 @@
 ---
 title: "PRO3017: start here"
 subtitle: "Evidence Synthesis 3: Systematic Review Research Project · Period 6"
+description: "PRO3017 Evidence Synthesis 3, University College Maastricht: turning a systematic review into a complete manuscript and presenting it."
 toc: false
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Evidence Synthesis"
 subtitle: "Systematic reviews and meta-analysis at University College Maastricht, January to June 2027"
+description: "Course website for Evidence Synthesis at University College Maastricht: systematic reviews and meta-analysis in three modules (SKI3010, SKI3011, PRO3017), with schedules, deadlines, R lectures and materials."
 toc: false
 ---
 

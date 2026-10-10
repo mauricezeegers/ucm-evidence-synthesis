@@ -1,6 +1,7 @@
 ---
 title: "SKI3011: start here"
 subtitle: "Evidence Synthesis 2: Statistics in Systematic Reviewing · Period 5"
+description: "SKI3011 Evidence Synthesis 2, University College Maastricht: a systematic review and meta-analysis in R on a topic of your choice, from protocol to draft paper."
 toc: false
 ---
 

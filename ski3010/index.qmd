@@ -1,6 +1,7 @@
 ---
 title: "SKI3010: start here"
 subtitle: "Evidence Synthesis 1: Study Designs in Systematic Reviewing · Period 4"
+description: "SKI3010 Evidence Synthesis 1, University College Maastricht: study designs, risk of bias and meta-analysis by hand and in JASP, working towards a first systematic review."
 toc: false
 ---
 
