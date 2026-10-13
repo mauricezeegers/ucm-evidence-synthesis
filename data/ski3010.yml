@@ -51,7 +51,7 @@ weeks:
     tutorial:
       - Quantitative data extraction
     assignments:
-      - {id: A2a, title: "Quantitative data extraction of all primary papers", due: "2027-02-23 11:59", grading: pass/fail}
+      - {id: A2a, title: "Quantitative data extraction of your six primary papers", due: "2027-02-23 11:59", grading: pass/fail}
       - {id: A2b, title: "2nd draft: introduction, methods, results", due: "2027-02-23 11:59", grading: pass/fail}
     homework: []
   - week: 4
