@@ -35,4 +35,4 @@ The final paper and the peer review are graded with the [rubrics](../rubrics.qmd
 * **Deadlines.** Hand in via the [submission form](../submit.qmd). The progress assignments A1 to A4 are pass/fail; you get feedback in the next tutorial.
 * **Lectures** are optional, their content is not: it is not repeated in the tutorials and is tested in the quiz of the following week. **Tutorials** are for the quiz and for working on your assignment with help from the tutor.
 * **AI** is allowed as a tutor; see [AI use](../ai.qmd). Every paper contains a short AI-use paragraph in the methods.
-* **Announcements** are sent through Canvas and reach you by e-mail.
+* **Announcements** are sent through Canvas and reach you by e-mail. Check your Canvas notification settings so that you receive them.

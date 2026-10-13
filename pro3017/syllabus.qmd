@@ -29,4 +29,4 @@ The manuscript is graded with the [rubric for the final paper](../rubrics.qmd).
 
 * **Deadlines.** Hand in via the [submission form](../submit.qmd), always with R script and dataset.
 * **AI** is allowed; see [AI use](../ai.qmd).
-* **Announcements** are sent through Canvas and reach you by e-mail.
+* **Announcements** are sent through Canvas and reach you by e-mail. Check your Canvas notification settings so that you receive them.
