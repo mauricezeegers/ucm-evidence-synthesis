@@ -59,7 +59,7 @@ The file uses `;` as separator, while `read.csv()` expects commas. Use `read.csv
 
 ### Practice quiz
 
-15 minutes, on paper, no devices.
+15 minutes, on paper, no devices except a simple calculator.
 
 1. What is the difference between `install.packages("meta")` and `library(meta)`? (2 points)
 2. What does `exp(log(1.5))` return, and why? (2 points)

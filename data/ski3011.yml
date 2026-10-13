@@ -113,7 +113,7 @@ weeks:
     assignments:
       - {id: A5, title: "Final paper + R code + dataset", due: "2027-05-21 23:59", grading: "60%"}
 assessment:
-  - ["Quizzes 1-5 (paper, in the tutorial, interpreting R code and output)", "25%", "Best 4 of 5 count"]
-  - ["A4 Individual peer review", "15%", "Individual"]
+  - ["Quizzes 1-5 (paper, in the tutorial, interpreting R code and output)", "25%", "Individual; best 4 of 5 count"]
+  - ["A4 Individual peer review", "15%", "Individual; marked 0-10 in 4 categories (absent: 0, insufficient: 4, sufficient: 7, excellent: 10)"]
   - ["A5 Final paper + R code + dataset", "60%", "Group of 1-3 students"]
-  - ["A1-A3 Progress assignments", "0%", "Pass/fail"]
+  - ["A1-A3 Progress assignments", "0%", "Group; pass/fail"]

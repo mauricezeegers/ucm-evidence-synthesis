@@ -65,7 +65,7 @@ A random-effects model with REML (the default of `rma()`). Fixed effect: `rma(yi
 
 ### Practice quiz
 
-15 minutes, on paper, no devices.
+15 minutes, on paper, no devices except a simple calculator.
 
 1. Which `measure =` would you use for (a) the proportion of patients with a complication, (b) correlations between two test scores, (c) mean pain scores in two groups measured on the same scale? (3 points)
 2. What is the difference between `yi` and `vi`? (1 point)

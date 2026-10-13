@@ -8,7 +8,7 @@ The semester has two phases.
 
 ## Carbon-based: SKI3010 and weeks 1 to 6 of SKI3011
 
-The goal is that you master the concepts and the R code yourself. The paper quizzes, taken in the tutorial without devices, test exactly that. Use AI as a tutor, not as a ghostwriter.
+The goal is that you master the concepts and the R code yourself. The paper quizzes, taken in the tutorial without devices (a simple calculator is allowed), test exactly that. Use AI as a tutor, not as a ghostwriter.
 
 ::: {.callout-tip}
 ## Switch your AI to learning mode

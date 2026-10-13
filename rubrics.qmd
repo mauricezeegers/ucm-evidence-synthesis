@@ -18,6 +18,8 @@ Draft rubrics for 2026-2027.
 
 ## Peer review (individual)
 
+The peer review is marked 0-10 in four categories: absent (0), insufficient (4), sufficient (7) or excellent (10).
+
 | Criterion | What we look for |
 |---|---|
 | Completeness | All sections of the paper are covered, including methods and results, not only language. |

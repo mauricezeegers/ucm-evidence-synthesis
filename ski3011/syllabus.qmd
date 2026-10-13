@@ -33,7 +33,7 @@ The final paper and the peer review are graded with the [rubrics](../rubrics.qmd
 ## Rules
 
 * **Groups.** You work in a group of 1 to 3 students on a topic of your own choice. Every member is responsible for the whole paper and code. The peer review is individual.
-* **Quizzes.** Paper quiz at the start of the tutorial, no devices. The best 4 of 5 quizzes count. A missed quiz scores 0 and has no separate resit. With documented illness you can take the quiz in the next tutorial.
+* **Quizzes.** Individual paper quiz at the start of the tutorial, no devices except a simple calculator. The best 4 of 5 quizzes count. A missed quiz scores 0 and has no separate resit. With documented illness you can take the quiz in the next tutorial.
 * **Deadlines.** Hand in via the [submission form](../submit.qmd). Always include your R script and your dataset (csv), so that your results can be reproduced.
 * **AI** is allowed as a tutor from week 1 and as a co-worker from week 7; see [AI use](../ai.qmd). Every paper contains a short AI-use paragraph in the methods.
 * **Announcements** are sent through Canvas and reach you by e-mail.

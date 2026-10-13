@@ -48,7 +48,7 @@ When the studies measure the same construct on different scales (for example dif
 
 ### Practice quiz
 
-15 minutes, on paper, no devices.
+15 minutes, on paper, no devices except a simple calculator.
 
 1. Explain each argument: `metabin(event.e = ev_t, n.e = n_t, event.c = ev_c, n.c = n_c, sm = "RR", data = dat)`. (2 points)
 2. A study has 0 events in the control group. What problem does this give for the OR, and how does `metabin()` deal with it? (2 points)

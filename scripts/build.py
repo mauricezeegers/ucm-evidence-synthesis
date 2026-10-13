@@ -119,7 +119,7 @@ def write_week(module, data, w):
     if w.get("quiz"):
         q = w["quiz"]
         lines.append(f'::: {{.callout-important}}\n## Quiz {q["n"]} in this tutorial\n{q["topic"]}. '
-                     "Paper quiz, no devices. Prepare with the concept list and practice questions of last week.\n:::\n")
+                     "Individual paper quiz, no devices except a simple calculator. Prepare with the concept list and practice questions of last week.\n:::\n")
     if w.get("lecture"):
         lines.append("## Lecture\n" + "".join(f"* {x}\n" for x in w["lecture"]))
         links = "".join(f'* [{l["text"]}]({l["href"]})\n' for l in w.get("links", []))

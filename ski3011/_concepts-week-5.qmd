@@ -61,7 +61,7 @@ No: Egger's test is not significant (p = 0.42), and trim-and-fill adds only one 
 
 ### Practice quiz
 
-15 minutes, on paper, no devices.
+15 minutes, on paper, no devices except a simple calculator.
 
 1. Output shows `I^2: 92.22%` and `Q(df = 12) = 152.23, p-val < .01`. Interpret both. (2 points)
 2. What does `leave1out(res)` do, and when is it useful? (2 points)

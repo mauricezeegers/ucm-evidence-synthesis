@@ -7,7 +7,7 @@ period: 4
 weeks:
   - week: 1
     date: 2027-01-27
-    theme: "Systematic reviews and observational studies"
+    theme: "Systematic reviews and observational study designs"
     lecture:
       - Course overview
       - Systematic literature reviews
@@ -99,7 +99,7 @@ weeks:
       - "Install: R and RStudio (for SKI3011)"
       - "Start thinking about your own research topic and group for SKI3011"
 assessment:
-  - ["Quizzes 1-4 (paper, in the tutorial)", "20%", "Best 3 of 4 count"]
-  - ["A5 Individual peer review", "15%", "Individual"]
+  - ["Quizzes 1-4 (paper, in the tutorial)", "20%", "Individual; best 3 of 4 count"]
+  - ["A5 Individual peer review", "15%", "Individual; marked 0-10 in 4 categories (absent: 0, insufficient: 4, sufficient: 7, excellent: 10)"]
   - ["A6 Final paper", "65%", "Group of 1-3 students"]
-  - ["A1-A4 Progress assignments", "0%", "Pass/fail"]
+  - ["A1-A4 Progress assignments", "0%", "Group; pass/fail"]

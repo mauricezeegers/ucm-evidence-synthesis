@@ -66,7 +66,7 @@ It is the predicted log RR at latitude 0 (the equator): RR = exp(0.251) = 1.29. 
 
 ### Practice quiz
 
-15 minutes, on paper, no devices.
+15 minutes, on paper, no devices except a simple calculator.
 
 1. Write the code for a meta-regression of `yi` on the categorical moderator `design` (cohort / case-control). (2 points)
 2. The output of that model shows `QM(df = 1) = 1.77, p-val = 0.18`. What do you conclude? (2 points)

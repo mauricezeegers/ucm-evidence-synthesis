@@ -45,7 +45,7 @@ Because the included studies may be too different (in population, exposure, outc
 
 ### Practice quiz
 
-The real quiz has the same format: 15 minutes, on paper, no devices (a simple calculator is allowed). Try it without your notes first.
+The real quiz has the same format: 15 minutes, on paper, no devices except a simple calculator. Try it without your notes first.
 
 1. Name the four elements of a PECO question. (1 point)
 2. A study follows 10,000 children from birth and records which vaccines they receive and whether they are later diagnosed with autism. Which design is this? (1 point)
