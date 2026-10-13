@@ -10,6 +10,7 @@ weeks:
     theme: "Systematic reviews and observational study designs"
     lecture:
       - Course overview
+      - "Introduction to the review topic: thimerosal-containing vaccines and autism spectrum disorder"
       - Systematic literature reviews
       - Observational study designs
       - Risk of bias and the Newcastle-Ottawa Scale (NOS)
@@ -18,6 +19,7 @@ weeks:
     tutorial:
       - "Introduction: systematic review and research topic"
       - "Search and find relevant papers (different databases)"
+      - "Choose 6 papers from the [folder with all primary studies](https://drive.google.com/drive/folders/1Cw0T5iHlKiaahjgwpbSfFifErXYUIqae)"
       - Choose your partner
     homework:
       - "Read the 6 primary studies and make a PRISMA flow chart"

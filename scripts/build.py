@@ -8,6 +8,7 @@ Generated files are listed in .gitignore; edit the data files or the handwritten
 import datetime as dt
 import html
 import pathlib
+import re
 from zoneinfo import ZoneInfo
 
 import yaml
@@ -55,8 +56,13 @@ def week_label(w):
     return fmt_day(w["date"])
 
 
+def md_links(text):
+    # markdown links [text](url) in the data files become <a> tags in the HTML schedule table
+    return re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
+
+
 def items(lst):
-    return "<br>".join(esc(x) for x in lst) if lst else ""
+    return "<br>".join(md_links(esc(x)) for x in lst) if lst else ""
 
 
 def schedule_html(module, data):
