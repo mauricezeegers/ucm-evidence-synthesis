@@ -34,7 +34,7 @@ weeks:
     tutorial:
       - Study characteristics and risk of bias
     assignments:
-      - {id: A1a, title: "Study characteristics and risk of bias of all primary papers (spreadsheet)", due: "2027-02-16 11:59", grading: pass/fail}
+      - {id: A1a, title: "Study characteristics and risk of bias of your six primary papers (spreadsheet)", due: "2027-02-16 11:59", grading: pass/fail}
       - {id: A1b, title: "1st draft: outline, introduction, methods, results incl. robvis plot", due: "2027-02-16 11:59", grading: pass/fail}
     homework:
       - "Read: Chapter 4.3, Textbook of Epidemiology"
