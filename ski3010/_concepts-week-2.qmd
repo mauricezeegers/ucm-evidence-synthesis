@@ -54,7 +54,7 @@ OR = (60 × 100) / (40 × 100) = **1.5**. In a case-control study the researcher
 
 15 minutes, on paper, calculator allowed.
 
-1. In a town, 15 of 1,000 children have an autism diagnosis on 1 January. Is this a risk, a rate or a prevalence? (1 point)
+1. In a town, 15 of 1,000 children have an autism diagnosis on 1 January. Is this an incidence rate or a prevalence? (1 point)
 2. Fill in the formula of the odds ratio using cells a, b, c and d of a 2×2 table. (1 point)
 3. A study reports RR = 0.80 (95% CI 0.65 to 0.98). Interpret this result in one or two sentences. (2 points)
 4. A cohort has 50 cases among 1,000 exposed and 25 cases among 1,000 unexposed people. Calculate the RR and the RD. (2 points)
