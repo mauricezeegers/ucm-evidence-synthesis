@@ -6,7 +6,6 @@ These concepts are covered in Quiz 2 (next week's tutorial). Textbook: Chapters 
 
 | Concept | In one sentence |
 |---|---|
-| Risk (cumulative incidence) | The proportion of people without the disease at the start who develop it during a period: new cases / people at risk. |
 | Incidence rate | New cases divided by the total person-time at risk, for example 3 per 1,000 person-years. |
 | Prevalence | The proportion of a population that has the disease at one moment in time. |
 | Odds | The number of people with the outcome divided by the number without it: p / (1 − p). |

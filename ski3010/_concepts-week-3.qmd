@@ -40,11 +40,11 @@ These concepts are covered in Quiz 3 (next week's tutorial, after carnival). Use
 Σw = 168.7; Σ(w × ln OR) = 4.26 − 6.35 + 4.15 = 2.07; pooled ln OR = 2.07/168.7 = 0.012, so OR = **1.01**. SE = 1/√168.7 = 0.077; CI = exp(0.012 ± 1.96 × 0.077) = **0.87 to 1.18**.
 :::
 
-**3.** Q = 1.62 with 2 degrees of freedom. What is I², and what does that mean?
+**3.** Why does a meta-analysis weight each study by the inverse of its variance, and what does that mean for a large study with a narrow CI?
 
 ::: {.callout-tip collapse="true"}
 ## Answer
-Q is smaller than df, so I² = **0%**: the differences between the three studies are compatible with chance alone, and fixed- and random-effects models give the same result.
+Precise studies carry more information about the true effect than imprecise ones, so they should count more. The inverse of the variance (1/SE²) does exactly that: a large study with a narrow CI has a small SE and therefore a large weight.
 :::
 
 **4.** Which study has the largest weight, and why?
